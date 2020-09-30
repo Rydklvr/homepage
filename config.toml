@@ -1,0 +1,59 @@
+baseURL = "http://mathieuhendey.com/"
+languageCode = "en-gb"
+theme = "cactus"
+title = "Mathieu Hendey"
+googleAnalytics = "UA-28625544-1"
+summaryLength = 2
+[params]
+description = "I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS."
+colortheme = "light"
+
+[[menu.main]]
+name = "home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "all posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "tags"
+url = "/tags"
+weight = 3
+
+[[params.social]]
+link = "https://github.com/mathieuhendey"
+name = "github"
+
+[[params.social]]
+link = "m@mathieuhendey.com" # no need for "mailto:" at the start
+name = "email" 
+
+[[params.social]]
+link = "https://www.linkedin.com/in/mathieu-hendey/"
+name = "linkedin"
+
+[[deployment.targets]]
+name = "http://mathieuhendey.com.s3.amazonaws.com/"
+URL = "s3://mathieuhendey.com?region=us-west-2"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+        typographer = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4

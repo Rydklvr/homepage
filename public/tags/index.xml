@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Mathieu Hendey</title>
+    <link>http://mathieuhendey.com/tags/</link>
+    <description>Recent content in Tags on Mathieu Hendey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 01 Oct 2020 21:47:23 +0100</lastBuildDate><atom:link href="http://mathieuhendey.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development environment</title>
+      <link>http://mathieuhendey.com/tags/development-environment/</link>
+      <pubDate>Thu, 01 Oct 2020 21:47:23 +0100</pubDate>
+      
+      <guid>http://mathieuhendey.com/tags/development-environment/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

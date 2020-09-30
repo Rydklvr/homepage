@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://mathieuhendey.com/tags/development-environment/</loc>
+    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/</loc>
+    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/posts/</loc>
+    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/posts/stowing-dotfiles/</loc>
+    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/tags/</loc>
+    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/categories/</loc>
+  </url>
+  
+</urlset>
