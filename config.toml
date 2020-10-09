@@ -7,6 +7,7 @@ summaryLength = 2
 [params]
 description = "I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS."
 colortheme = "light"
+rss = true
 
 [[menu.main]]
 name = "home"
@@ -23,6 +24,10 @@ name = "tags"
 url = "/tags"
 weight = 3
 
+[[menu.main]]
+name = "RSS"
+url = "/index.xml"
+weight = 4
 [[params.social]]
 link = "https://github.com/mathieuhendey"
 name = "github"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ways of working on Mathieu Hendey</title>
+    <link>http://mathieuhendey.com/tags/ways-of-working/</link>
+    <description>Recent content in Ways of working on Mathieu Hendey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 08 Oct 2020 21:07:02 +0100</lastBuildDate><atom:link href="http://mathieuhendey.com/tags/ways-of-working/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working From Home</title>
+      <link>http://mathieuhendey.com/posts/working-from-home/</link>
+      <pubDate>Thu, 08 Oct 2020 21:07:02 +0100</pubDate>
+      
+      <guid>http://mathieuhendey.com/posts/working-from-home/</guid>
+      <description>Like most software people in the UK, I&amp;rsquo;ve been working from home since March.</description>
+    </item>
+    
+  </channel>
+</rss>

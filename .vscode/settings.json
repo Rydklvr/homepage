@@ -1,0 +1,24 @@
+{
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/content/posts/working-from-home.md"
+            ],
+            "config": {
+                "audience": "general",
+                "dialect": "british",
+                "domain": "general",
+                "emotions": [
+                    "optimistic",
+                    "respectful",
+                    "friendly",
+                    "analytical"
+                ],
+                "goals": [
+                    "tellStory"
+                ],
+                "emotion": "mild"
+            }
+        }
+    ]
+}

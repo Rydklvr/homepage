@@ -844,7 +844,7 @@ body {
 }
 #header-post #toc nav > ul > li > ul > li {
   color: #666;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 #header-post #toc nav > ul > li > ul > li:before {
   color: #d44375;
@@ -854,7 +854,7 @@ body {
 }
 #header-post #toc nav > ul > li > ul > li > ul > li {
   color: #525252;
-  font-size: 0.4rem;
+  font-size: 0.7rem;
 }
 #header-post #toc .toc-level-5 {
   display: none;

@@ -3,27 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://mathieuhendey.com/tags/general/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/posts/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/tags/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/tags/ways-of-working/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/posts/working-from-home/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mathieuhendey.com/tags/working-from-home/</loc>
+    <lastmod>2020-10-08T21:07:02+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mathieuhendey.com/tags/development-environment/</loc>
     <lastmod>2020-10-01T21:47:23+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mathieuhendey.com/</loc>
-    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mathieuhendey.com/posts/</loc>
-    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mathieuhendey.com/posts/stowing-dotfiles/</loc>
-    <lastmod>2020-10-01T21:47:23+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mathieuhendey.com/tags/</loc>
     <lastmod>2020-10-01T21:47:23+01:00</lastmod>
   </url>
   
