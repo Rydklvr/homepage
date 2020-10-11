@@ -1,572 +1,93 @@
-<!DOCTYPE html>
-<html lang="en-gb">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Working From Home | Mathieu Hendey</title>
-  <meta name="description" content="I&#39;m a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="Working From Home" />
-<meta property="og:description" content="My experience WFH 100%" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://mathieuhendey.com/2020/10/working-from-home/" />
-<meta property="article:published_time" content="2020-10-08T21:07:02+01:00" />
-<meta property="article:modified_time" content="2020-10-08T21:07:02+01:00" />
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Working From Home"/>
-<meta name="twitter:description" content="My experience WFH 100%"/>
-
-  
-  
-    
-  
-  
-  <link rel="stylesheet" href="https://mathieuhendey.com/css/style-light.css">
-  
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
-
-  
-<link rel="icon" type="image/png" href="https://mathieuhendey.com/images/favicon.ico" />
-
-  
-  
-  
-  
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-28625544-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-</head>
-<body class="max-width mx-auto px3 ltr">
-  <div class="content index py4">
-
-  <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-        <li><a href="https://mathieuhendey.com/">home</a></li>
-         
-        <li><a href="https://mathieuhendey.com/posts">all posts</a></li>
-         
-        <li><a href="https://mathieuhendey.com/tags">tags</a></li>
-         
-        <li><a href="https://mathieuhendey.com/index.xml">RSS</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" https://mathieuhendey.com/2020/10/stowing-dotfiles/">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&text=Working%20From%20Home">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&is_video=false&description=Working%20From%20Home">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=Working%20From%20Home&body=Check out this article: https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-digg " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&name=Working%20From%20Home&description=My%20experience%20WFH%20100%25">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&t=Working%20From%20Home">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#lockdown-begins">Lockdown begins</a></li>
-    <li><a href="#getting-to-grips-with-wfh-mar-jun">Getting to grips with WFH (Mar-Jun)</a></li>
-    <li><a href="#breaking-through-jun-sep">Breaking through (Jun-Sep)</a>
-      <ul>
-        <li><a href="#improvements-in-work">Improvements in work</a></li>
-        <li><a href="#improvements-outside-work">Improvements outside work</a>
-          <ul>
-            <li><a href="#cycling">Cycling</a></li>
-            <li><a href="#accepting-wfh">Accepting WFH</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#how-i-learned-to-love-wfh-sep-present">How I learned to love WFH (Sep-present)</a>
-      <ul>
-        <li><a href="#good-things">Good things</a>
-          <ul>
-            <li><a href="#i-can-work-to-my-schedule">I can work to my schedule</a></li>
-            <li><a href="#i-have-more-time-to-do-things-out-of-work">I have more time to do things out of work</a></li>
-            <li><a href="#mentally-work-feels-less-like-work">Mentally, work feels less like work</a></li>
-            <li><a href="#company-has-been-very-supportive">Company has been very supportive</a></li>
-          </ul>
-        </li>
-        <li><a href="#bad-things">Bad things</a>
-          <ul>
-            <li><a href="#difficult-to-switch-off">Difficult to switch off</a></li>
-            <li><a href="#difficult-to-onboard-new-people">Difficult to onboard new people</a></li>
-            <li><a href="#spontaneous-conversations-have-disappeared">Spontaneous conversations have disappeared</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#takeaways">Takeaways</a></li>
-  </ul>
-</nav>
-    </div>
-  </span>
-</div>
-
-
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        Working From Home
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
-          
-          <time datetime="2020-10-08 21:07:02 &#43;0100 BST" itemprop="datePublished">2020-10-08</time>
-          
-        </div>
-        
-        
-        <div class="article-tag">
-            <i class="fas fa-tag"></i>
-            
-            
-            <a class="tag-link" href="https://mathieuhendey.com/tags/general" rel="tag">General</a>
-            
-            
-            <a class="tag-link" href="https://mathieuhendey.com/tags/ways-of-working" rel="tag">Ways of working</a>
-            
-             ,  
-            <a class="tag-link" href="https://mathieuhendey.com/tags/working-from-home" rel="tag">Working from home</a>
-            
-        </div> 
-        
-      </div>
-    </header>
-
-  
-    <div class="content" itemprop="articleBody">
-      <p>Like most software people in the UK, I&rsquo;ve been working from home since March.
-There have been some bad times, some mediocre times, and now some good times.</p>
-<p>Here I discuss my particular experience of working from home as an employee of
-Arm.</p>
-<h2 id="lockdown-begins">Lockdown begins</h2>
-<p>COVID-19 goes very quickly from a subject of small-talk to real worry.</p>
-<p><strong>On the 12th of March</strong>, we get an email from the CEO saying every office in
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Working From Home | Mathieu Hendey</title><meta name=description content="I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS."><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:title" content="Working From Home"><meta property="og:description" content="My experience WFH 100%"><meta property="og:type" content="article"><meta property="og:url" content="https://mathieuhendey.com/2020/10/working-from-home/"><meta property="article:published_time" content="2020-10-08T21:07:02+01:00"><meta property="article:modified_time" content="2020-10-08T21:07:02+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Working From Home"><meta name=twitter:description content="My experience WFH 100%"><link rel=stylesheet href=https://mathieuhendey.com/css/style-light.min.e59d2ceacf71ab262ecbcda96e2e8aec9cbcc4623a4324dabb2a0f2e5bcf92cf.css><script defer src=https://mathieuhendey.com/lib/jquery/jquery.min.js></script><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script><script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=https://mathieuhendey.com/images/favicon.ico><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-28625544-1','auto');ga('send','pageview');}</script></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a><a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a><a id=top-icon-tablet href=# onclick="$('html, body').animate({scrollTop:0},'fast');" style=display:none><i class="fas fa-chevron-up fa-lg"></i></a><span id=menu><span id=nav><ul><li><a href=https://mathieuhendey.com/>home</a></li><li><a href=https://mathieuhendey.com/posts>all posts</a></li><li><a href=https://mathieuhendey.com/tags>tags</a></li><li><a href=https://mathieuhendey.com/categories>categories</a></li><li><a href=https://mathieuhendey.com/index.xml>RSS</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=https://mathieuhendey.com/2020/10/stowing-dotfiles/><i class="fas fa-chevron-left" aria-hidden=true onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li><li><a class=icon href=https://mathieuhendey.com/2020/10/static-ssl-website-entirely-on-aws/><i class="fas fa-chevron-right" aria-hidden=true onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li><li><a class=icon href=# onclick="$('html, body').animate({scrollTop:0},'fast');"><i class="fas fa-chevron-up" aria-hidden=true onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li><li><a class=icon href=#><i class="fas fa-share-alt" aria-hidden=true onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>
+<span id=i-next class=info style=display:none>Next post</span>
+<span id=i-top class=info style=display:none>Back to top</span>
+<span id=i-share class=info style=display:none>Share post</span></span><br><div id=share style=display:none><ul><li><a class=icon href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f"><i class="fab fa-facebook" aria-hidden=true></i></a></li><li><a class=icon href="https://twitter.com/share?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&text=Working%20From%20Home"><i class="fab fa-twitter" aria-hidden=true></i></a></li><li><a class=icon href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li><a class=icon href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&is_video=false&description=Working%20From%20Home"><i class="fab fa-pinterest" aria-hidden=true></i></a></li><li><a class=icon href="mailto:?subject=Working%20From%20Home&body=Check out this article: https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f"><i class="fas fa-envelope" aria-hidden=true></i></a></li><li><a class=icon href="https://getpocket.com/save?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-get-pocket" aria-hidden=true></i></a></li><li><a class=icon href="http://reddit.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-reddit" aria-hidden=true></i></a></li><li><a class=icon href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-stumbleupon" aria-hidden=true></i></a></li><li><a class=icon href="http://digg.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-digg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&name=Working%20From%20Home&description=My%20experience%20WFH%20100%25"><i class="fab fa-tumblr" aria-hidden=true></i></a></li><li><a class=icon href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&t=Working%20From%20Home"><i class="fab fa-hacker-news" aria-hidden=true></i></a></li></ul></div><div id=toc><nav id=TableOfContents><ul><li><a href=#lockdown-begins>Lockdown begins</a></li><li><a href=#getting-to-grips-with-wfh-mar-jun>Getting to grips with WFH (Mar-Jun)</a></li><li><a href=#breaking-through-jun-sep>Breaking through (Jun-Sep)</a><ul><li><a href=#improvements-in-work>Improvements in work</a></li><li><a href=#improvements-outside-work>Improvements outside work</a><ul><li><a href=#cycling>Cycling</a></li><li><a href=#accepting-wfh>Accepting WFH</a></li></ul></li></ul></li><li><a href=#how-i-learned-to-love-wfh-sep-present>How I learned to love WFH (Sep-present)</a><ul><li><a href=#good-things>Good things</a><ul><li><a href=#i-can-work-to-my-schedule>I can work to my schedule</a></li><li><a href=#i-have-more-time-to-do-things-out-of-work>I have more time to do things out of work</a></li><li><a href=#mentally-work-feels-less-like-work>Mentally, work feels less like work</a></li><li><a href=#company-has-been-very-supportive>Company has been very supportive</a></li></ul></li><li><a href=#bad-things>Bad things</a><ul><li><a href=#difficult-to-switch-off>Difficult to switch off</a></li><li><a href=#difficult-to-onboard-new-people>Difficult to onboard new people</a></li><li><a href=#spontaneous-conversations-have-disappeared>Spontaneous conversations have disappeared</a></li></ul></li></ul></li><li><a href=#takeaways>Takeaways</a></li></ul></nav></div></span></div><article class=post itemscope itemtype=http://schema.org/BlogPosting><header><h1 class=posttitle itemprop="name headline">Working From Home</h1><div class=meta><div class=postdate><time datetime="2020-10-08 21:07:02 +0100 BST" itemprop=datePublished>2020-10-08</time></div><div class=article-tag><i class="fas fa-tag"></i><a href=https://mathieuhendey.com/tags/general rel=tag>general</a>
+<a href=https://mathieuhendey.com/tags/ways-of-working rel=tag>ways of working</a>
+,
+<a href=https://mathieuhendey.com/tags/working-from-home rel=tag>working from home</a></div></div></header><div class=content itemprop=articleBody><p>Like most software people in the UK, I&rsquo;ve been working from home since March.
+There have been some bad times, some mediocre times, and now some good times.</p><p>Here I discuss my particular experience of working from home as an employee of
+Arm.</p><h2 id=lockdown-begins>Lockdown begins</h2><p>COVID-19 goes very quickly from a subject of small-talk to real worry.</p><p><strong>On the 12th of March</strong>, we get an email from the CEO saying every office in
 the world was to move to work from home by default. This was not unsurprising
-news: the news in the UK had been talking about lockdown for quite some time.</p>
-<p>So that was it; we were all working from home. We&rsquo;d been told to start bringing
+news: the news in the UK had been talking about lockdown for quite some time.</p><p>So that was it; we were all working from home. We&rsquo;d been told to start bringing
 everything we needed to do our jobs home for a few weeks at that point, so I had
-my laptop with me and not much else.</p>
-<p>I made a quick smash-and-grab to the office to grab a few things, but this was
-the last time I would see the office for quite some time.</p>
-<h2 id="getting-to-grips-with-wfh-mar-jun">Getting to grips with WFH (Mar-Jun)</h2>
-<p>Before it happened, I always thought I&rsquo;d like to work from home. Surely being
+my laptop with me and not much else.</p><p>I made a quick smash-and-grab to the office to grab a few things, but this was
+the last time I would see the office for quite some time.</p><h2 id=getting-to-grips-with-wfh-mar-jun>Getting to grips with WFH (Mar-Jun)</h2><p>Before it happened, I always thought I&rsquo;d like to work from home. Surely being
 able to do what you want while working is better than being in an office where
 you have to do certain things and act a certain way to not come across as a
-lunatic.</p>
-<p>It turns out; I hated it. Shortly after the lockdown began, I moved to a new
+lunatic.</p><p>It turns out; I hated it. Shortly after the lockdown began, I moved to a new
 project, so I now faced working from home on an indefinite basis and having to
 upskill on a new project with new people. All while sitting on a sofa working on
-a 13-inch laptop.</p>
-<p>The first few months did not go well.</p>
-<ol>
-<li>I wasn&rsquo;t getting the new project</li>
-<li>I felt like I was asking stupid questions</li>
-<li>pairing with people over Teams felt awkward</li>
-<li>I was working from a laptop on a sofa</li>
-</ol>
-<p>My motivation crashed through the floor and opening the laptop becoming a
+a 13-inch laptop.</p><p>The first few months did not go well.</p><ol><li>I wasn&rsquo;t getting the new project</li><li>I felt like I was asking stupid questions</li><li>pairing with people over Teams felt awkward</li><li>I was working from a laptop on a sofa</li></ol><p>My motivation crashed through the floor and opening the laptop becoming a
 struggle. I felt stupid; I wasn&rsquo;t a productive member of the team at all, and it
 felt like I was under pressure to perform. Everyone was very understanding, and
 I didn&rsquo;t feel any pressure externally. Still, I was putting a lot of pressure on
-myself.</p>
-<h2 id="breaking-through-jun-sep">Breaking through (Jun-Sep)</h2>
-<h3 id="improvements-in-work">Improvements in work</h3>
-<p>Finally, something clicked, and what I was working on started to make sense. I
+myself.</p><h2 id=breaking-through-jun-sep>Breaking through (Jun-Sep)</h2><h3 id=improvements-in-work>Improvements in work</h3><p>Finally, something clicked, and what I was working on started to make sense. I
 felt like I was beginning to make a positive contribution to the team rather
-than dragging the rest back with my tedious questions.</p>
-<p>Instead of just asking hundreds of questions and converting the answers to code,
+than dragging the rest back with my tedious questions.</p><p>Instead of just asking hundreds of questions and converting the answers to code,
 I was getting to the point where I was able to see how something could be done
 myself. Like a snowball down a hill, my motivation and confidence just kept
-growing.</p>
-<h3 id="improvements-outside-work">Improvements outside work</h3>
-<h4 id="cycling">Cycling</h4>
-<p>I started cycling (a lot, <a href="https://www.strava.com/athletes/15811815">here</a>&rsquo;s my
-Strava) about 40 km a day. I think this is one of the most important things I
-did. It gave a massive boost to my mental health, and since I was a beginner, I
-could see improvements pretty much every time I went out. Using Strava meant I
-could gamify and see how my times and average speeds were improving.</p>
-<h4 id="accepting-wfh">Accepting WFH</h4>
-<p>Before this time, I always had in the back of my mind that WFH was a temporary
+growing.</p><h3 id=improvements-outside-work>Improvements outside work</h3><h4 id=cycling>Cycling</h4><p>I started cycling (a lot, <a href=https://www.strava.com/athletes/15811815>here&rsquo;s my Strava
+profile</a>)about 40 km a day. I think
+this is one of the most important things I did. It gave a massive boost to my
+mental health, and since I was a beginner, I could see improvements pretty much
+every time I went out. Using Strava meant I could gamify and see how my times
+and average speeds were improving.</p><h4 id=accepting-wfh>Accepting WFH</h4><p>Before this time, I always had in the back of my mind that WFH was a temporary
 situation. I suppose it still is, but at this point, the point it stops being
 temporary is still indefinitely far away. I&rsquo;ve now accepted this fact, and I&rsquo;m
-no longer waiting for the day we head back to the office.</p>
-<h2 id="how-i-learned-to-love-wfh-sep-present">How I learned to love WFH (Sep-present)</h2>
-<p>Despite the improvements mentioned above, I was still working from my tiny
+no longer waiting for the day we head back to the office.</p><h2 id=how-i-learned-to-love-wfh-sep-present>How I learned to love WFH (Sep-present)</h2><p>Despite the improvements mentioned above, I was still working from my tiny
 laptop on a sofa. In the meantime, Arm released a system allowing a small number
 of us into the office per day, so I booked a day in and raided my desk, running
-away with two monitors under my arms.</p>
-<p>I assembled a cheap desk we had in a box somewhere and finally had something
-resembling a home office.</p>
-<p>By the day of writing, I am now as happy or happier WFH than I was in the
-office.</p>
-<h3 id="good-things">Good things</h3>
-<h4 id="i-can-work-to-my-schedule">I can work to my schedule</h4>
-<p>I&rsquo;m sure everyone has their idiosyncratic way of working; it&rsquo;s why I don&rsquo;t think
+away with two monitors under my arms.</p><p>I assembled a cheap desk we had in a box somewhere and finally had something
+resembling a home office.</p><p>By the day of writing, I am now as happy or happier WFH than I was in the
+office.</p><h3 id=good-things>Good things</h3><h4 id=i-can-work-to-my-schedule>I can work to my schedule</h4><p>I&rsquo;m sure everyone has their idiosyncratic way of working; it&rsquo;s why I don&rsquo;t think
 the standard Western model of everyone gathering in an office 9-5 is a very good
 system. I like to take regular breaks where what I&rsquo;m working on allows as I find
 it helps keep my concentration levels up. For example, every 45 minutes, I&rsquo;ll
-noodle around on my guitar or do some tidying.</p>
-<h4 id="i-have-more-time-to-do-things-out-of-work">I have more time to do things out of work</h4>
-<p>I cycled to work, and I liked to be in early to leave early, so I was up at
+noodle around on my guitar or do some tidying.</p><h4 id=i-have-more-time-to-do-things-out-of-work>I have more time to do things out of work</h4><p>I cycled to work, and I liked to be in early to leave early, so I was up at
 07:00 every morning and getting home around 16:30, by which point I badly needed
-a shower and couldn&rsquo;t be bothered doing anything.</p>
-<p>Now, as soon as the clock hits 16:00, I&rsquo;m out the door and on my bike. I have
+a shower and couldn&rsquo;t be bothered doing anything.</p><p>Now, as soon as the clock hits 16:00, I&rsquo;m out the door and on my bike. I have
 time to spend with my family in the morning before they leave for work and I&rsquo;m
-helping out around the house more.</p>
-<p>Unfortunately, there&rsquo;s not much in the way of pubs and cinemas; most are open
+helping out around the house more.</p><p>Unfortunately, there&rsquo;s not much in the way of pubs and cinemas; most are open
 with social-distancing measures but I still don&rsquo;t feel safe going (I&rsquo;ve had
 pneumonia twice). Fortunately I don&rsquo;t seem to require as much human-interaction
-as some of my colleagues so I&rsquo;m not feeling the effects of this yet.</p>
-<h4 id="mentally-work-feels-less-like-work">Mentally, work feels less like work</h4>
-<p>At first, this was an issue; I liked having the separation of an office where
+as some of my colleagues so I&rsquo;m not feeling the effects of this yet.</p><h4 id=mentally-work-feels-less-like-work>Mentally, work feels less like work</h4><p>At first, this was an issue; I liked having the separation of an office where
 Work Things happened, and a home where Home Things happened. Now that it&rsquo;s all
 merged into one location (i.e. my bedroom), I&rsquo;m personally finding it a lot more
 enjoyable. As mentioned above, I find my productivity improves with regular
 breaks. Sometimes breakthroughs about what I&rsquo;m working on come to me while I&rsquo;m
-playing my guitar or walking around the block.</p>
-<h4 id="company-has-been-very-supportive">Company has been very supportive</h4>
-<p>I&rsquo;m pleased with how Arm have handled this. They are not taking a
+playing my guitar or walking around the block.</p><h4 id=company-has-been-very-supportive>Company has been very supportive</h4><p>I&rsquo;m pleased with how Arm have handled this. They are not taking a
 one-size-fits-all approach, and if you have some circumstances (kids, short
 appointments, etc.), within my team at least, they trust you enough that a Slack
 message is enough. If you need to go AFK for 30 minutes, that doesn&rsquo;t seem to be
-an issue.</p>
-<p>Throughout this whole process, they have emphasised that they understand people
+an issue.</p><p>Throughout this whole process, they have emphasised that they understand people
 will have different circumstances and will need to take time during the day to
-take care of them.</p>
-<p>Unofficially the policy seems to be &ldquo;don&rsquo;t take the piss&rdquo;. As long as your
+take care of them.</p><p>Unofficially the policy seems to be &ldquo;don&rsquo;t take the piss&rdquo;. As long as your
 assigned work gets done on time, and you let people know what you&rsquo;re doing,
-that&rsquo;s enough.</p>
-<h3 id="bad-things">Bad things</h3>
-<h4 id="difficult-to-switch-off">Difficult to switch off</h4>
-<p>Whereas before there was physical separation between work and home, there now
+that&rsquo;s enough.</p><h3 id=bad-things>Bad things</h3><h4 id=difficult-to-switch-off>Difficult to switch off</h4><p>Whereas before there was physical separation between work and home, there now
 isn&rsquo;t. I find it can sometimes be difficult to change modes in my head, and not
-always check Slack or make small adjustments to code.</p>
-<p>I&rsquo;ve set up a mute on my Slack notifications to try and mitigate this, but in
+always check Slack or make small adjustments to code.</p><p>I&rsquo;ve set up a mute on my Slack notifications to try and mitigate this, but in
 today&rsquo;s data-addicted world it can be difficult not to log in every so often and
-see what&rsquo;s happening.</p>
-<h4 id="difficult-to-onboard-new-people">Difficult to onboard new people</h4>
-<p>As mentioned further up, joining a new project while everyone was working from
+see what&rsquo;s happening.</p><h4 id=difficult-to-onboard-new-people>Difficult to onboard new people</h4><p>As mentioned further up, joining a new project while everyone was working from
 home was not ideal. I&rsquo;m not sure how this problem could be solved, perhaps
 there&rsquo;s a gap in the market for a company to create some software to do this.
 Because we communicate mainly via IM, I felt like I was bothering people with my
 inane questions. We do have a well-maintained Confluence, but as I&rsquo;m sure anyone
-who&rsquo;s used Confluence knows, its discovery features are&hellip; lacking somewhat.</p>
-<h4 id="spontaneous-conversations-have-disappeared">Spontaneous conversations have disappeared</h4>
-<p>There are people I would have spoken to on smoke breaks or in the kitchen that
+who&rsquo;s used Confluence knows, its discovery features are&mldr; lacking somewhat.</p><h4 id=spontaneous-conversations-have-disappeared>Spontaneous conversations have disappeared</h4><p>There are people I would have spoken to on smoke breaks or in the kitchen that
 I&rsquo;ve barely talked to since lockdown. If you&rsquo;re having a bad day it can be nice
 to commiserate with someone over a tea, but in today&rsquo;s world of
 everything-happens-in-IM, the spontaneity just isn&rsquo;t there, and it can feel
 awkward. We tried having some daily &ldquo;tea break&rdquo; open-conversation calls, but
 attendance was just so low we cancelled them; the general feeling was they were
-enforced fun.</p>
-<h2 id="takeaways">Takeaways</h2>
-<p>While I&rsquo;m not sure WFH is the future in an unchanged form from how we&rsquo;ve been
+enforced fun.</p><h2 id=takeaways>Takeaways</h2><p>While I&rsquo;m not sure WFH is the future in an unchanged form from how we&rsquo;ve been
 practising it, I certainly think a move to more flexible working is both
-inevitable and beneficial.</p>
-<p>I would like to see the office become more of a place of <strong>meeting</strong> rather than
-a place of <strong>work</strong>.</p>
-<p>Further, it&rsquo;s clear that it hasn&rsquo;t worked for everyone. WFH definitely didn&rsquo;t
+inevitable and beneficial.</p><p>I would like to see the office become more of a place of <strong>meeting</strong> rather than
+a place of <strong>work</strong>.</p><p>Further, it&rsquo;s clear that it hasn&rsquo;t worked for everyone. WFH definitely didn&rsquo;t
 work for me for the first few months, and I&rsquo;m not sure we can expect new
 joiners, perhaps people who&rsquo;ve just graduated from uni, to be able to hit the
-ground running without physical, in-presence support.</p>
-<p>The main takeaway from this experience for me is this:</p>
-<blockquote>
-<p>The one-size-fits-all way of working we currently have does not fit everyone.</p>
-</blockquote>
-<p>I think going forward companies will have to look at their approach to
+ground running without physical, in-presence support.</p><p>The main takeaway from this experience for me is this:</p><blockquote><p>The one-size-fits-all way of working we currently have does not fit everyone.</p></blockquote><p>I think going forward companies will have to look at their approach to
 flexible-working. As I said, not everyone works in the same way, and enforcing a
 certain way of working may help those who find that way of working productive,
-but it can hinder those who don&rsquo;t.</p>
-
-    </div>
-  </article>
-
-  
-  
-
-
-
-
-
-  <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="https://mathieuhendey.com/">home</a></li>
-         
-          <li><a href="https://mathieuhendey.com/posts">all posts</a></li>
-         
-          <li><a href="https://mathieuhendey.com/tags">tags</a></li>
-         
-          <li><a href="https://mathieuhendey.com/index.xml">RSS</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#lockdown-begins">Lockdown begins</a></li>
-    <li><a href="#getting-to-grips-with-wfh-mar-jun">Getting to grips with WFH (Mar-Jun)</a></li>
-    <li><a href="#breaking-through-jun-sep">Breaking through (Jun-Sep)</a>
-      <ul>
-        <li><a href="#improvements-in-work">Improvements in work</a></li>
-        <li><a href="#improvements-outside-work">Improvements outside work</a>
-          <ul>
-            <li><a href="#cycling">Cycling</a></li>
-            <li><a href="#accepting-wfh">Accepting WFH</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#how-i-learned-to-love-wfh-sep-present">How I learned to love WFH (Sep-present)</a>
-      <ul>
-        <li><a href="#good-things">Good things</a>
-          <ul>
-            <li><a href="#i-can-work-to-my-schedule">I can work to my schedule</a></li>
-            <li><a href="#i-have-more-time-to-do-things-out-of-work">I have more time to do things out of work</a></li>
-            <li><a href="#mentally-work-feels-less-like-work">Mentally, work feels less like work</a></li>
-            <li><a href="#company-has-been-very-supportive">Company has been very supportive</a></li>
-          </ul>
-        </li>
-        <li><a href="#bad-things">Bad things</a>
-          <ul>
-            <li><a href="#difficult-to-switch-off">Difficult to switch off</a></li>
-            <li><a href="#difficult-to-onboard-new-people">Difficult to onboard new people</a></li>
-            <li><a href="#spontaneous-conversations-have-disappeared">Spontaneous conversations have disappeared</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#takeaways">Takeaways</a></li>
-  </ul>
-</nav>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f">
-      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&text=Working%20From%20Home">
-      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&is_video=false&description=Working%20From%20Home">
-      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=Working%20From%20Home&body=Check out this article: https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f">
-      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home">
-      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&name=Working%20From%20Home&description=My%20experience%20WFH%20100%25">
-      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&t=Working%20From%20Home">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-      
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
-          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
-          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
-          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
-          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
-    </div>
-
-  </div>
-</div>
-
-
-  <footer id="footer">
-  <div class="footer-left">
-    Copyright  &copy; 2020  Mathieu Hendey 
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-        <li><a href="https://mathieuhendey.com/">home</a></li>
-         
-        <li><a href="https://mathieuhendey.com/posts">all posts</a></li>
-         
-        <li><a href="https://mathieuhendey.com/tags">tags</a></li>
-         
-        <li><a href="https://mathieuhendey.com/index.xml">RSS</a></li>
-        
-      </ul>
-    </nav>
-  </div>
-</footer>
-
-
-  </div>
-</body>
-
-<link rel="stylesheet" href=https://mathieuhendey.com/lib/font-awesome/css/all.min.css>
-<script src=https://mathieuhendey.com/lib/jquery/jquery.min.js></script>
-<script src=https://mathieuhendey.com/js/main.js></script>
-
-
-
-</html>
+but it can hinder those who don&rsquo;t.</p></div></article><div id=footer-post-container><div id=footer-post><div id=nav-footer style=display:none><ul><li><a href=https://mathieuhendey.com/>home</a></li><li><a href=https://mathieuhendey.com/posts>all posts</a></li><li><a href=https://mathieuhendey.com/tags>tags</a></li><li><a href=https://mathieuhendey.com/categories>categories</a></li><li><a href=https://mathieuhendey.com/index.xml>RSS</a></li></ul></div><div id=toc-footer style=display:none><nav id=TableOfContents><ul><li><a href=#lockdown-begins>Lockdown begins</a></li><li><a href=#getting-to-grips-with-wfh-mar-jun>Getting to grips with WFH (Mar-Jun)</a></li><li><a href=#breaking-through-jun-sep>Breaking through (Jun-Sep)</a><ul><li><a href=#improvements-in-work>Improvements in work</a></li><li><a href=#improvements-outside-work>Improvements outside work</a><ul><li><a href=#cycling>Cycling</a></li><li><a href=#accepting-wfh>Accepting WFH</a></li></ul></li></ul></li><li><a href=#how-i-learned-to-love-wfh-sep-present>How I learned to love WFH (Sep-present)</a><ul><li><a href=#good-things>Good things</a><ul><li><a href=#i-can-work-to-my-schedule>I can work to my schedule</a></li><li><a href=#i-have-more-time-to-do-things-out-of-work>I have more time to do things out of work</a></li><li><a href=#mentally-work-feels-less-like-work>Mentally, work feels less like work</a></li><li><a href=#company-has-been-very-supportive>Company has been very supportive</a></li></ul></li><li><a href=#bad-things>Bad things</a><ul><li><a href=#difficult-to-switch-off>Difficult to switch off</a></li><li><a href=#difficult-to-onboard-new-people>Difficult to onboard new people</a></li><li><a href=#spontaneous-conversations-have-disappeared>Spontaneous conversations have disappeared</a></li></ul></li></ul></li><li><a href=#takeaways>Takeaways</a></li></ul></nav></div><div id=share-footer style=display:none><ul><li><a class=icon href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f"><i class="fab fa-facebook fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://twitter.com/share?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&text=Working%20From%20Home"><i class="fab fa-twitter fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-linkedin fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&is_video=false&description=Working%20From%20Home"><i class="fab fa-pinterest fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="mailto:?subject=Working%20From%20Home&body=Check out this article: https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f"><i class="fas fa-envelope fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://getpocket.com/save?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-get-pocket fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://reddit.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-reddit fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-stumbleupon fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://digg.com/submit?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&title=Working%20From%20Home"><i class="fab fa-digg fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.tumblr.com/share/link?url=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&name=Working%20From%20Home&description=My%20experience%20WFH%20100%25"><i class="fab fa-tumblr fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fmathieuhendey.com%2f2020%2f10%2fworking-from-home%2f&t=Working%20From%20Home"><i class="fab fa-hacker-news fa-lg" aria-hidden=true></i></a></li></ul></div><div id=actions-footer><a id=menu class=icon href=# onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden=true></i>Menu</a>
+<a id=toc class=icon href=# onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden=true></i>TOC</a>
+<a id=share class=icon href=# onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden=true></i>share</a>
+<a id=top style=display:none class=icon href=# onclick="$('html, body').animate({scrollTop:0},'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden=true></i>Top</a></div></div></div><footer id=footer><div class=footer-left>Copyright &copy; 2020 Mathieu Hendey</div><div class=footer-right><nav><ul><li><a href=https://mathieuhendey.com/>home</a></li><li><a href=https://mathieuhendey.com/posts>all posts</a></li><li><a href=https://mathieuhendey.com/tags>tags</a></li><li><a href=https://mathieuhendey.com/categories>categories</a></li><li><a href=https://mathieuhendey.com/index.xml>RSS</a></li></ul></nav></div></footer></div></body><link rel=stylesheet href=https://mathieuhendey.com/lib/font-awesome/css/all.min.css><script src=https://mathieuhendey.com/lib/jquery/jquery.min.js></script><script src=https://mathieuhendey.com/js/main.js></script></html>

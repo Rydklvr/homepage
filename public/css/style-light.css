@@ -439,11 +439,19 @@ body td {
   font-style: normal;
   font-family: "Meslo LG";
   src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-style: normal;
   font-family: "JetBrains Mono";
   src: local("JetBrains Mono"), url("../lib/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-family: "PT Serif";
+  src: local("PT Serif"), url("../lib/PT_Serif/PTSerif-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 *,
 *:before,
@@ -461,13 +469,13 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background-color: #e2e0de;
+  background-color: white;
   color: #363533;
   font-display: swap;
   font-weight: 400;
-  font-size: 16px;
-  font-family: "JetBrains Mono", monospace;
-  line-height: 1.725;
+  font-size: 18px;
+  font-family: "PT Serif", serif;
+  line-height: 24px;
   text-rendering: geometricPrecision;
   flex: 1;
   -moz-osx-font-smoothing: grayscale;
@@ -613,16 +621,16 @@ body {
   letter-spacing: 0.01em;
   font-weight: 200;
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 10px;
 }
 #header #nav ul {
-  margin: 0;
   padding: 0;
   list-style-type: none;
   line-height: 15px;
 }
 #header #nav ul a {
   margin-right: 15px;
+  font-size: medium;
   color: #d44375;
 }
 #header #nav ul a:hover {
@@ -771,7 +779,7 @@ body {
   letter-spacing: 0.01em;
   font-weight: 200;
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 #header-post #nav ul {
   line-height: 15px;
@@ -1498,35 +1506,35 @@ article .content .caption {
 }
 pre {
   overflow-x: auto;
-  padding: 10px 15px;
+  padding: 11px 15px 12px;
   padding-bottom: 0;
-  border: 1px dotted #666;
-  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  border-left: 10px solid #d5d5d5;
   font-size: 16px;
   font-family: "JetBrains Mono", monospace;
   line-height: 22px;
-  -webkit-border-radius: 4px;
+  margin: 0px 0px 24px -25px;
 }
 pre code {
   font-size: 16px;
   display: block;
   padding: 0;
-  border: none;
 }
 code {
+  font-size: 15px;
   padding: 0 5px;
-  border: 1px dotted #666;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border: 1px solid #ccc;
 }
 .highlight {
+  border: 1px solid #d5d5d5;
+  border-left: 10px solid #d5d5d5;
   overflow-x: auto;
-  margin: 1rem 0;
-  padding: 10px 15px;
-  border-radius: 4px;
-  background: #dedcd9;
+  margin: 0px 0px 24px -25px;
+  border-radius: 2px;
+  padding: 0px 0px;
+  line-height: 20px;
+  background: white;
   font-family: "JetBrains Mono", monospace;
-  -webkit-border-radius: 4px;
 }
 .highlight figcaption {
   margin: -5px 0 5px;

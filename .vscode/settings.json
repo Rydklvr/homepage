@@ -19,6 +19,22 @@
                 ],
                 "emotion": "mild"
             }
+        },
+        {
+            "files": [
+                "**/content/posts/static-blog-aws.md"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "british",
+                "domain": "technical",
+                "emotions": [],
+                "goals": [
+                    "inform",
+                    "describe"
+                ],
+                "emotion": "mild"
+            }
         }
     ]
 }

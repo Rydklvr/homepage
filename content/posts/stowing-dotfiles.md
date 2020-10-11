@@ -2,7 +2,11 @@
 title: "Stowing Dotfiles"
 date: 2020-10-01T21:47:23+01:00
 draft: false
-tags: ["development environment"]
+tags: 
+    - tools
+categories: 
+    - development
+description: Test
 ---
 
 I recently found about a piece of GNU software called Stow[^1].

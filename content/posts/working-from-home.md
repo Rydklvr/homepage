@@ -4,9 +4,9 @@ description: "My experience WFH 100%"
 date: 2020-10-08T21:07:02+01:00
 draft: false
 tags:
-    - General
-    - Ways of working
-    - Working from home
+    - general
+    - ways of working
+    - working from home
 ---
 
 Like most software people in the UK, I've been working from home since March.
@@ -72,11 +72,12 @@ growing.
 
 #### Cycling
 
-I started cycling (a lot, [here](https://www.strava.com/athletes/15811815)'s my
-Strava) about 40 km a day. I think this is one of the most important things I
-did. It gave a massive boost to my mental health, and since I was a beginner, I
-could see improvements pretty much every time I went out. Using Strava meant I
-could gamify and see how my times and average speeds were improving.
+I started cycling (a lot, [here's my Strava
+profile](https://www.strava.com/athletes/15811815))about 40 km a day. I think
+this is one of the most important things I did. It gave a massive boost to my
+mental health, and since I was a beginner, I could see improvements pretty much
+every time I went out. Using Strava meant I could gamify and see how my times
+and average speeds were improving.
 
 #### Accepting WFH
 

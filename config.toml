@@ -6,6 +6,11 @@ googleAnalytics = "UA-28625544-1"
 summaryLength = 2
 canonifyURLs = true
 enableRobotsTXT = true
+enableEmoji = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 [permalinks]
     posts = "/:year/:month/:slug/"
     page = "/:slug/"
@@ -13,6 +18,7 @@ enableRobotsTXT = true
 description = "I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS."
 colortheme = "light"
 rss = true
+showAllPostsOnHomePage = false
 
 [[menu.main]]
 name = "home"
@@ -30,9 +36,14 @@ url = "/tags"
 weight = 3
 
 [[menu.main]]
+name = "categories"
+url = "/categories"
+weight = 4
+
+[[menu.main]]
 name = "RSS"
 url = "/index.xml"
-weight = 4
+weight = 5
 [[params.social]]
 link = "https://github.com/mathieuhendey"
 name = "github"
@@ -65,5 +76,5 @@ URL = "s3://mathieuhendey.com?region=us-west-2"
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "monokai"
+    style = "xcode"
     tabWidth = 4
