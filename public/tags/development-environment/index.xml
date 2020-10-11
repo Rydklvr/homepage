@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>development environment on Mathieu Hendey</title>
-    <link>http://mathieuhendey.com/tags/development-environment/</link>
+    <link>https://mathieuhendey.com/tags/development-environment/</link>
     <description>Recent content in development environment on Mathieu Hendey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Oct 2020 21:47:23 +0100</lastBuildDate><atom:link href="http://mathieuhendey.com/tags/development-environment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 21:47:23 +0100</lastBuildDate><atom:link href="https://mathieuhendey.com/tags/development-environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stowing Dotfiles</title>
-      <link>http://mathieuhendey.com/posts/stowing-dotfiles/</link>
+      <link>https://mathieuhendey.com/2020/10/stowing-dotfiles/</link>
       <pubDate>Thu, 01 Oct 2020 21:47:23 +0100</pubDate>
       
-      <guid>http://mathieuhendey.com/posts/stowing-dotfiles/</guid>
+      <guid>https://mathieuhendey.com/2020/10/stowing-dotfiles/</guid>
       <description>I recently found about a piece of GNU software called Stow1.</description>
     </item>
     

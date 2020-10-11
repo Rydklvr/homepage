@@ -1,9 +1,14 @@
-baseURL = "http://mathieuhendey.com/"
+baseURL = "https://mathieuhendey.com/"
 languageCode = "en-gb"
 theme = "cactus"
 title = "Mathieu Hendey"
 googleAnalytics = "UA-28625544-1"
 summaryLength = 2
+canonifyURLs = true
+enableRobotsTXT = true
+[permalinks]
+    posts = "/:year/:month/:slug/"
+    page = "/:slug/"
 [params]
 description = "I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS."
 colortheme = "light"
