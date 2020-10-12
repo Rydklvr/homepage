@@ -435,12 +435,7 @@ body td {
   padding: 0 8px;
   border-bottom: none;
 }
-@font-face {
-  font-style: normal;
-  font-family: "Meslo LG";
-  src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
-  font-display: swap;
-}
+
 @font-face {
   font-style: normal;
   font-family: "PT Serif";
@@ -609,7 +604,6 @@ body {
 }
 #header #logo {
   display: inline-block;
-  float: left;
   margin-right: 20px;
   width: 50px;
   height: 50px;
@@ -700,7 +694,6 @@ body {
   top: 2rem;
   right: 0;
   display: inline-block;
-  float: right;
   z-index: 100;
 }
 #header-post a {
@@ -908,7 +901,6 @@ body {
   }
   #header-post #actions ul {
     display: inline-block;
-    float: right;
   }
   #header-post #actions .info {
     display: inline;
@@ -1579,7 +1571,7 @@ figure figcaption p {
   color: #919191;
 }
 .highlight figcaption:before,
-.highlight figcaption content: "" {
+.highlight figcaption content {
   display: table;
 }
 .highlight figcaption:after {
