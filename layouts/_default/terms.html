@@ -2,7 +2,7 @@
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="content" itemprop="articleBody">
     {{ if (eq .Type "tags")}}
-    <div id="categories">
+    <div id="tags">
       {{ if (eq (len .Data.Terms) 0) }}
       <div class="category-list-title">
         No tags
@@ -19,6 +19,8 @@
         </ul>
       </div>
     </div>
+
+
     {{ else if (eq .Type "categories")}}
     <div id="categories">
       {{ if (eq (len .Data.Terms) 0) }}

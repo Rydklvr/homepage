@@ -6,10 +6,8 @@ enableRobotsTXT = true
 googleAnalytics = 'UA-28625544-1'
 languageCode = 'en-gb'
 summaryLength = 2
-theme = 'cactus'
 title = 'Mathieu Hendey'
 DefaultContentLanguage = "en"
-
 [languages.en]
 languageCode = 'en-us'
 languageName = 'English'
@@ -33,10 +31,15 @@ github = 'https://github.com/mathieuhendey'
 og_image = '/img/og_image.png'
 sitename = 'Mathieu Hendey'
 twitter = '@mathieu_hendey'
+mainSections = ["all posts"]
 
 [[params.social]]
 link = 'https://github.com/mathieuhendey'
 name = 'github'
+
+[[params.social]]
+link = 'https://news.ycombinator.com/user?id=mathieuh'
+name = 'hacker-news'
 
 [[params.social]]
 link = 'm@mathieuhendey.com'
@@ -45,6 +48,18 @@ name = 'email'
 [[params.social]]
 link = 'https://www.linkedin.com/in/mathieu-hendey/'
 name = 'linkedin'
+
+[[params.social]]
+link = 'https://www.strava.com/athletes/15811815'
+name = 'Strava'
+
+[[params.social]]
+link = 'https://www.last.fm/user/Mathieuhendey'
+name = 'lastfm'
+[[params.social]]
+link = 'https://mathieuhendey.com/index.xml'
+name = 'rss'
+
 [[menu.main]]
 name = 'home'
 url = '/'
@@ -65,10 +80,6 @@ name = 'categories'
 url = '/categories'
 weight = 4
 
-[[menu.main]]
-name = 'RSS'
-url = '/index.xml'
-weight = 5
 [[deployment.targets]]
 URL = 's3://mathieuhendey.com?region=us-west-2'
 name = 'http://mathieuhendey.com.s3.amazonaws.com/'
