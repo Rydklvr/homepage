@@ -13,6 +13,11 @@ languageCode = 'en-us'
 languageName = 'English'
 weight = 1
 
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 [taxonomies]
 category = 'categories'
 tag = 'tags'
@@ -23,7 +28,7 @@ posts = '/:year/:month/:slug/'
 
 [params]
 colortheme = 'light'
-description = '''I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS.'''
+description = '''I'm a software developer currently working on SIMs and IOT for Arm. Before that I spent a few years working on various UK government projects managed by GDS.'''
 rss = true
 showAllPostsOnHomePage = false
 author = 'Mathieu Hendey'
