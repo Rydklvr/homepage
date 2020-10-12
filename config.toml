@@ -82,7 +82,7 @@ weight = 4
 
 [[deployment.targets]]
 URL = 's3://mathieuhendey.com?region=us-west-2'
-name = 'http://mathieuhendey.com.s3.amazonaws.com/'
+name = 'mathieuhendey.com S3 bucket'
 [markup.tableOfContents]
 endLevel = 4
 ordered = false

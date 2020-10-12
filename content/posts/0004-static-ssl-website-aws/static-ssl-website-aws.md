@@ -51,7 +51,7 @@ Next, we are going to create two S3 buckets:
     enable the "Static website hosting" property but set it to redirect requests
     to your bare domain using `https`.
 
-{{< figure src="images/www_redirect.png" caption="Make sure you redirect with https to the bucket with the bare domain" width="500px" height="537px" alt="Redirect bucket properties">}}
+{{< figure src="/img/www_redirect.png" caption="Make sure you redirect with https to the bucket with the bare domain" width="500px" height="537px" alt="Redirect bucket properties">}}
 
 Now, you have two buckets, one called `website.com` and one called
 `www.website.com`. `www.website.com` just redirects to the
@@ -86,7 +86,7 @@ screen.
 
 Add both the bare domain and the `www.` subdomain.
 
-{{< figure src="images/certificate_domain_names.png" caption="Make sure you add both the bare domain and the www subdomain" width="440px" height="242px" alt="Add domain names">}}
+{{< figure src="/img/certificate_domain_names.png" caption="Make sure you add both the bare domain and the www subdomain" width="440px" height="242px" alt="Add domain names">}}
 
 On the next screen, choose whichever verification one you prefer. I chose DNS
 validation because since my domain is all managed in AWS, it involved no input
