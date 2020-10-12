@@ -1,80 +1,91 @@
-baseURL = "https://mathieuhendey.com/"
-languageCode = "en-gb"
-theme = "cactus"
-title = "Mathieu Hendey"
-googleAnalytics = "UA-28625544-1"
-summaryLength = 2
+baseURL = 'https://mathieuhendey.com/'
 canonifyURLs = true
-enableRobotsTXT = true
 enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+googleAnalytics = 'UA-28625544-1'
+languageCode = 'en-gb'
+summaryLength = 2
+theme = 'cactus'
+title = 'Mathieu Hendey'
+DefaultContentLanguage = "en"
+
+[languages.en]
+languageCode = 'en-us'
+languageName = 'English'
+weight = 1
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+category = 'categories'
+tag = 'tags'
+
 [permalinks]
-    posts = "/:year/:month/:slug/"
-    page = "/:slug/"
+page = '/:slug/'
+posts = '/:year/:month/:slug/'
+
 [params]
-description = "I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS."
-colortheme = "light"
+colortheme = 'light'
+description = '''I'm a software developer currently working on SIM and IOT things for Arm. Before that I spent a few years working on various UK government projects managed by GDS.'''
 rss = true
 showAllPostsOnHomePage = false
+author = 'Mathieu Hendey'
+github = 'https://github.com/mathieuhendey'
+og_image = '/img/og_image.png'
+sitename = 'Mathieu Hendey'
+twitter = '@mathieu_hendey'
 
+[[params.social]]
+link = 'https://github.com/mathieuhendey'
+name = 'github'
+
+[[params.social]]
+link = 'm@mathieuhendey.com'
+name = 'email'
+
+[[params.social]]
+link = 'https://www.linkedin.com/in/mathieu-hendey/'
+name = 'linkedin'
 [[menu.main]]
-name = "home"
-url = "/"
+name = 'home'
+url = '/'
 weight = 1
 
 [[menu.main]]
-name = "all posts"
-url = "/posts"
+name = 'all posts'
+url = '/posts'
 weight = 2
 
 [[menu.main]]
-name = "tags"
-url = "/tags"
+name = 'tags'
+url = '/tags'
 weight = 3
 
 [[menu.main]]
-name = "categories"
-url = "/categories"
+name = 'categories'
+url = '/categories'
 weight = 4
 
 [[menu.main]]
-name = "RSS"
-url = "/index.xml"
+name = 'RSS'
+url = '/index.xml'
 weight = 5
-[[params.social]]
-link = "https://github.com/mathieuhendey"
-name = "github"
-
-[[params.social]]
-link = "m@mathieuhendey.com" # no need for "mailto:" at the start
-name = "email" 
-
-[[params.social]]
-link = "https://www.linkedin.com/in/mathieu-hendey/"
-name = "linkedin"
-
 [[deployment.targets]]
-name = "http://mathieuhendey.com.s3.amazonaws.com/"
-URL = "s3://mathieuhendey.com?region=us-west-2"
+URL = 's3://mathieuhendey.com?region=us-west-2'
+name = 'http://mathieuhendey.com.s3.amazonaws.com/'
+[markup.tableOfContents]
+endLevel = 4
+ordered = false
+startLevel = 2
+[markup.goldmark.extensions]
+typographer = true
 
-[markup]
-  [markup.tableOfContents]
-    endLevel = 4
-    ordered = false
-    startLevel = 2
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-        typographer = true
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "xcode"
-    tabWidth = 4
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+style = 'xcode'
+tabWidth = 4

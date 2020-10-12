@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
 {{ partial "head.html" . }}
+
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
@@ -12,10 +13,8 @@
     {{ partial "footer.html" . }}
 
   </div>
-      {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
 </body>
+{{ partial "links.html" . }}
 
-<link rel="stylesheet" href={{ "lib/font-awesome/css/all.min.css" | relURL }}>
-<script src={{ "lib/jquery/jquery.min.js" | relURL }}></script>
-<script src={{ "js/main.js" | relURL }}></script>
 </html>
