@@ -4,19 +4,15 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 googleAnalytics = 'UA-28625544-1'
-languageCode = 'en-gb'
 summaryLength = 2
 title = 'Mathieu Hendey'
-DefaultContentLanguage = "en"
-[languages.en]
-languageCode = 'en-us'
-languageName = 'English'
 weight = 1
 
+
 [sitemap]
-  changefreq = "daily"
-  filename = "sitemap.xml"
-  priority = 0.5
+changefreq = 'daily'
+filename = 'sitemap.xml'
+priority = 0.5
 
 [taxonomies]
 category = 'categories'
@@ -27,6 +23,8 @@ page = '/:slug/'
 posts = '/:year/:month/:slug/'
 
 [params]
+languageCode = 'en-gb'
+languageName = 'English'
 colortheme = 'light'
 description = '''I'm a software developer currently working on SIMs and IOT for Arm. Before that I spent a few years working on various UK government projects managed by GDS.'''
 rss = true
@@ -36,7 +34,9 @@ github = 'https://github.com/mathieuhendey'
 og_image = '/img/og_image.png'
 sitename = 'Mathieu Hendey'
 twitter = '@mathieu_hendey'
-mainSections = ["all posts"]
+mainSections = ['all posts']
+# gravatar = 'm@mathieuhendey.com'
+logo = '/img/logo.png'
 
 [[params.social]]
 link = 'https://github.com/mathieuhendey'
@@ -61,10 +61,10 @@ name = 'Strava'
 [[params.social]]
 link = 'https://www.last.fm/user/Mathieuhendey'
 name = 'lastfm'
+
 [[params.social]]
 link = 'https://mathieuhendey.com/index.xml'
 name = 'rss'
-
 [[menu.main]]
 name = 'home'
 url = '/'
@@ -84,7 +84,6 @@ weight = 3
 name = 'categories'
 url = '/categories'
 weight = 4
-
 [[deployment.targets]]
 URL = 's3://mathieuhendey.com?region=us-west-2'
 name = 'mathieuhendey.com S3 bucket'

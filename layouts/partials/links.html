@@ -1,10 +1,24 @@
 {{ $css := resources.Get "css/style-light.css" }}
-{{ $style := $css | resources.Minify | fingerprint }}
-{{ $fa := resources.Get "lib/font-awesome/css/all.min.css" }}
+{{ $siteStyleMin := $css | resources.Minify | fingerprint }}
+
+{{ $faCss := resources.Get "font-awesome/css/all.css" }}
+{{ $faCssStyleMin := $faCss | resources.Minify }}
+{{ $faJs := resources.Get "font-awesome/js/all.js" }}
+{{ $faJsMin := $faJs | resources.Minify }}
+
 {{ $jquery := resources.Get "lib/jquery/jquery.min.js" }}
 {{ $jsMain := resources.Get "js/main.js" }}
+{{ $jsMainMin := $jsMain | resources.Minify }}
 
-<link rel="stylesheet" href="{{ $style.Permalink }}">
-<link rel="stylesheet" href="{{ $fa.Permalink }}">
+{{ $ptSerif := resources.Get "fonts/PT_Serif/PTSerif-Regular.ttf" }}
+
+<link rel="preload" href="{{ $siteStyleMin.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ $faCssStyleMin.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ $ptSerif.Permalink }}" as="font" type="font/ttf" crossorigin="anonymous">
+<noscript>
+    <link rel="stylesheet" href="{{ $faCssStyleMin.Permalink }}">
+    <link rel="stylesheet" href="{{ $siteStyleMin.Permalink }}">
+</noscript>
 <script src="{{ $jquery.Permalink }}" defer></script>
-<script src="{{ $jsMain.Permalink }}" defer></script>
+<script src="{{ $jsMainMin.Permalink }}" defer></script>
+<script src="{{ $faJsMin.Permalink }}" defer></script>

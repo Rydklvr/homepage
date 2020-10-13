@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.Params.languageCode }}">
 {{ partial "head.html" . }}
 
 <body class="max-width mx-auto px3 ltr">
@@ -15,6 +15,4 @@
   </div>
   {{ template "_internal/google_analytics.html" . }}
 </body>
-{{ partial "links.html" . }}
-
 </html>

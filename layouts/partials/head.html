@@ -1,27 +1,24 @@
 <head>
   <meta charset="utf-8">
   {{ template "_internal/schema.html" . }}
-  {{ with .Site.Params.description }}
-  {{ end }}
 
   {{ partial "meta" . }}
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
+
   {{ template "_internal/opengraph.html" . }}
+  
   {{ template "_internal/twitter_cards.html" . }}
-  {{ .Scratch.Set "colortheme" "white"}}
-  {{ if .Site.Params.Colortheme }}
-  {{ .Scratch.Set "colortheme" .Site.Params.Colortheme }}
-  {{ end }}
 
   {{ partial "favicon.html" . }}
+
   {{ if .Site.Params.rss }}
-  {{ with .OutputFormats.Get "RSS" }}
-  {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+    {{ with .OutputFormats.Get "RSS" }}
+      {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+    {{ end }}
   {{ end }}
-  {{ end }}
-  {{ template "_internal/google_analytics.html" . }}
+
   {{ partial "links.html" . }}
 </head>

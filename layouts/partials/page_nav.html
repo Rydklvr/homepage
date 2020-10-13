@@ -4,10 +4,10 @@
   <a id="top-icon-tablet" href="#" aria-label="Top of page" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"
     style="display:none;"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i></a>
   <span id="menu">
-    <span id="nav">
+    <span id="nav" role="navigation">
       <ul>
         {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
     </span>
@@ -15,20 +15,20 @@
     <span id="actions">
       <ul>
         {{ if .Prev }}
-        <li>
-          <a class="icon" href=" {{ .Prev.Permalink }}" aria-label="Previous post">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();"
-              onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
+          <li>
+            <a class="icon" href=" {{ .Prev.Permalink }}" aria-label="Previous post">
+              <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();"
+                onmouseout="$('#i-prev').toggle();"></i>
+            </a>
+          </li>
         {{ end }}
         {{ if .Next }}
-        <li>
-          <a class="icon" href="{{ .Next.Permalink }}" aria-label="Next post">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();"
-              onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
+          <li>
+            <a class="icon" href="{{ .Next.Permalink }}" aria-label="Next post">
+              <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();"
+                onmouseout="$('#i-next').toggle();"></i>
+            </a>
+          </li>
         {{ end }}
         <li>
           <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"

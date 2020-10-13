@@ -10,17 +10,17 @@
     {{ if eq $elem.name "email" }}
     <a class="icon" target="_blank" rel="noopener noreferrer" href="mailto:{{ $elem.link }}"
       aria-label="Email">
-      <span class="fas fa-envelope fa-fw"></span>
+      <i class="fas fa-envelope fa-fw"></i>
     </a>
     {{ else if eq $elem.name "rss" }}
     <a class="icon" target="_blank" rel="noopener noreferrer" href="{{ $elem.link }}"
       aria-label="RSS feed">
-      <em class="fas fa-rss fa-fw"></em>
+      <i class="fas fa-rss fa-fw"></i>
     </a>
     {{ else }}
     <a class="icon" target="_blank" rel="noopener noreferrer" href="{{ $elem.link }}"
       aria-label="{{ $elem.name }}">
-      <span class="fab fa-{{ lower $elem.name }} fa-fw"></span>
+      <i class="fab fa-{{ lower $elem.name }} fa-fw"></i>
     </a>
     {{ end }}
     {{ end }}

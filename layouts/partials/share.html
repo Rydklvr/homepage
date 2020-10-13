@@ -1,9 +1,9 @@
 <ul>
   {{ $icon_class_name := .Scratch.Get "icon_class_name"}}
   {{ if .Description }}
-  {{ .Scratch.Set "description" .Description }}
+    {{ .Scratch.Set "description" .Description }}
   {{ else }}
-  {{ .Scratch.Set "description" .Summary }}
+    {{ .Scratch.Set "description" .Summary }}
   {{ end }}
   {{ $description := .Scratch.Get "description" }}
   <li>
