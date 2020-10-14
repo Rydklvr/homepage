@@ -11,13 +11,14 @@ categories:
 
 I was recently doing some yak-shaving and decided to improve the SEO of my blog.
 
-There are a lot of `meta` tags that you can add that will improve how search engines
-index your blog. I also added some Open Graph Protocol[^1] meta tags.
+There are a lot of `meta` tags that you can add that will improve how search
+engines index your blog. I also added some Open Graph Protocol[^1] meta tags.
 
 ## config.toml
 
-Make sure your `config.toml` contains at least the required values. You can see my full
-`config.toml` on GitHub[^2], but these are the ones you'll need to recreate my `meta.html` partial.
+Make sure your `config.toml` contains at least the required values. You can see
+my full `config.toml` on GitHub[^2], but these are the ones you'll need to
+recreate my `meta.html` partial.
 
 ```toml {linenos=table,linenostart=1}
 enableRobotsTXT = true
@@ -36,7 +37,8 @@ twitter = '@mathieu_hendey'
 
 ## Adding the tags
 
-I recommend creating a `layouts/partials/meta.html` partial, which will be included in your `head` partial.
+I recommend creating a `layouts/partials/meta.html` partial, which will be
+included in your `head` partial.
 
 ### Title tags
 
@@ -85,12 +87,13 @@ Here are the title tags I'm using:
 
 ## Tags that should only appear in articles
 
-There are some tags that should only appear on article pages. Luckily Hugo
-has a way of detecting that you're in an article[^3], and so you can 
-conditionally insert these tags only on your articles.
+There are some tags that should only appear on article pages. Luckily Hugo has a
+way of detecting that you're in an article[^3], and so you can conditionally
+insert these tags only on your articles.
 
 If your directory structure matches what Hugo recommend[^4] (i.e., have a
-top-level directory under `content`) and then individual directories within, something like this:
+top-level directory under `content`) and then individual directories within,
+something like this:
 
 ```sh
 content
@@ -116,7 +119,6 @@ content
 Then you can add article-specific tags about things like published time, author
 and keywords.
 
-
 ```go-html-template {linenos=table,linenostart=1}
 {{ if eq .Section "posts" }}
 <meta property="og:type" content="article" />
@@ -134,8 +136,8 @@ and keywords.
 {{ end }}
 ```
 
-N.B. this will rely on your having some categories listed in your article's front matter. Here's the front
-matter for this post for example:
+N.B. this will rely on your having some categories listed in your article's
+front matter. Here's the front matter for this post for example:
 
 ```toml
 title: "Seo for Hugo blogs"
@@ -150,8 +152,9 @@ categories:
 
 ## Add it to your head.html partial
 
-Now you just need to add your new `meta.html` partial to your `head.html` partial and get `<meta>` tags
-inserted where they should be, and improve your SEO score.
+Now you just need to add your new `meta.html` partial to your `head.html`
+partial and get `<meta>` tags inserted where they should be, and improve your
+SEO score.
 
 ```go-html-template {linenos=table,hl_lines=["5"],linenostart=1}
 <head>
@@ -182,19 +185,20 @@ inserted where they should be, and improve your SEO score.
 
 ## Wrap up
 
-Now your blog will have all the `<meta>` tags you need, and you can use Google Chrome's Lighthouse tool[^5]
-to verify how well your site does against its SEO test. Here are my results:
+Now your blog will have all the `<meta>` tags you need, and you can use Google
+Chrome's Lighthouse tool[^5] to verify how well your site does against its SEO
+test. Here are my results:
 
 {{< figure src="/img/lighthouse_100_seo.png" caption="100% SEO score in Lighthouse" width="700px" height="310px" alt="Lighthouse SEO score">}}
 
-There are more tags for Facebook etc. but I don't use those services so didn't include them.
+There are more tags for Facebook etc. but I don't use those services so didn't
+include them.
 
-You can find my full `layouts/partials/meta.html on [GitHub](https://github.com/mathieuhendey/homepage/blob/main/layouts/partials/meta.html).
+You can find my full `layouts/partials/meta.html` on
+[GitHub](https://github.com/mathieuhendey/homepage/blob/main/layouts/partials/meta.html).
 
-
-[^1]: https://ogp.me/
-[^2]: https://github.com/mathieuhendey/homepage/blob/main/config.toml
-[^3]: https://gohugo.io/content-management/sections/
-[^4]: https://gohugo.io/content-management/organization/
-[^5]: https://developers.google.com/web/tools/lighthouse
-
+[^1]: <https://ogp.me/>
+[^2]: <https://github.com/mathieuhendey/homepage/blob/main/config.toml>
+[^3]: <https://gohugo.io/content-management/sections/>
+[^4]: <https://gohugo.io/content-management/organization/>
+[^5]: <https://developers.google.com/web/tools/lighthouse>
