@@ -41,33 +41,4 @@
 {{ range .Params.categories }}
 <meta name="news_keywords" content="{{ index . }}" />
 {{ end }}
-
-<script defer type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Article",
-          "headline": {{ .Title }},
-          "author": {
-            "@type": "Person",
-            "name": "{{ .Site.Params.github }}"
-          },
-          "datePublished": "{{ .Date.Format "2006-01-02" }}",
-          "description": {{ .Description }},
-          "wordCount": {{ .WordCount }},
-          "mainEntityOfPage": "True",
-          "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-          "image": {
-            "@type": "imageObject",
-            "url": "{{ with .Params.image }}{{ .Permalink }}{{ end }}"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "{{ .Site.Title }}",
-            "logo": {
-              "@type": "imageObject",
-              "url": "https://www.example.com/images/brand/favicon.png"
-            }
-          }
-        }
-      </script>
 {{ end }}

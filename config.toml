@@ -8,7 +8,6 @@ summaryLength = 2
 title = 'Mathieu Hendey'
 weight = 1
 
-
 [sitemap]
 changefreq = 'daily'
 filename = 'sitemap.xml'
@@ -35,7 +34,6 @@ og_image = '/img/og_image.png'
 sitename = 'Mathieu Hendey'
 twitter = '@mathieu_hendey'
 mainSections = ['all posts']
-# gravatar = 'm@mathieuhendey.com'
 logo = '/img/logo.png'
 
 [[params.social]]
