@@ -445,6 +445,7 @@ body td {
 *:before,
 *:after {
   box-sizing: border-box;
+
 }
 html {
   margin: 0;
@@ -1048,7 +1049,7 @@ body {
   margin-right: 16px;
   min-width: 100px;
   color: #9c3156;
-  font-size: 146x;
+  font-size: 18px;
   font-family: monospace;
 }
 @media (min-width: 480px) {

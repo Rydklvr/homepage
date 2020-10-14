@@ -12,13 +12,15 @@
 
 {{ $ptSerif := resources.Get "fonts/PT_Serif/PTSerif-Regular.ttf" }}
 
-<link rel="preload" href="{{ $siteStyleMin.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{ $faCssStyleMin.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{ $ptSerif.Permalink }}" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="{{ $siteStyleMin.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ $faCssStyleMin.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ $ptSerif.RelPermalink }}" as="font" type="font/ttf" crossorigin="anonymous">
 <noscript>
-    <link rel="stylesheet" href="{{ $faCssStyleMin.Permalink }}">
-    <link rel="stylesheet" href="{{ $siteStyleMin.Permalink }}">
+    <link rel="stylesheet" href="{{ $faCssStyleMin.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $siteStyleMin.RelPermalink }}">
 </noscript>
-<script src="{{ $jquery.Permalink }}" defer></script>
-<script src="{{ $jsMainMin.Permalink }}" defer></script>
-<script src="{{ $faJsMin.Permalink }}" defer></script>
+<link rel="stylesheet" href="{{ $faCssStyleMin.RelPermalink }}">
+<link rel="stylesheet" href="{{ $siteStyleMin.RelPermalink }}">
+<script src="{{ $jquery.RelPermalink }}" defer></script>
+<script src="{{ $jsMainMin.RelPermalink }}" defer></script>
+<script src="{{ $faJsMin.RelPermalink }}" defer></script>
