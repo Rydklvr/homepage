@@ -22,12 +22,14 @@ page = '/:slug/'
 posts = '/:year/:month/:slug/'
 
 [params]
-languageCode = 'en-gb'
+languageCode = 'en-GB'
 languageName = 'English'
 colortheme = 'light'
-description = '''I'm a software developer currently working on SIMs and IOT for Arm. Before that I spent a few years working on various UK government projects managed by GDS.'''
+description = '''I am a software developer currently working on SIMs and IOT for Arm. Before that I spent a few years working on various UK government projects managed by GDS.'''
 rss = true
-showAllPostsOnHomePage = false
+showallpostsonhomepage = false
+ShowProjectsList = false
+postsonhomepage = 10
 author = 'Mathieu Hendey'
 github = 'https://github.com/mathieuhendey'
 og_image = '/img/og_image.png'

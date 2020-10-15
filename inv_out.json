@@ -1,0 +1,17 @@
+{
+  "Location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/E2S0LJUNOTR5CD/invalidation/I2SRSR73RGDXZN",
+  "Invalidation": {
+    "Id": "I2SRSR73RGDXZN",
+    "Status": "InProgress",
+    "CreateTime": "2020-10-15T10:35:32.713000+00:00",
+    "InvalidationBatch": {
+      "Paths": {
+        "Quantity": 1,
+        "Items": [
+          "/*"
+        ]
+      },
+      "CallerReference": "cli-1602758129-415517"
+    }
+  }
+}

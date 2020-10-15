@@ -2,6 +2,7 @@
 title: "Working From Home"
 description: "My experience WFH 100%"
 date: 2020-10-08T21:07:02+01:00
+description: "My personal experience of working from home in unprecedented times: the good, the bad, and the actually pretty OK"
 draft: false
 tags:
     - general

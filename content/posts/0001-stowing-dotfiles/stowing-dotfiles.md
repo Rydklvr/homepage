@@ -2,6 +2,7 @@
 title: "Stowing Dotfiles"
 date: 2020-10-01T21:47:23+01:00
 draft: false
+description: "Using GNU's Stow tool to sync your dotfile configuration across machines with git!"
 tags: 
     - tools
 categories: 

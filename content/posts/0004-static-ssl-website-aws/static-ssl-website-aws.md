@@ -3,6 +3,7 @@ title: "Static SSL website entirely on AWS"
 author: Mathieu
 date: 2020-10-11T13:24:31+01:00
 draft: false
+description: "Use S3, Certificate Manager, CloudFront, and Route 53 to host an entire static website on AWS!"
 tags:
     - networking
     - SSL certificates

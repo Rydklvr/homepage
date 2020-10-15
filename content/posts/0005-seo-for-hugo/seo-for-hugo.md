@@ -3,6 +3,7 @@ title: "SEO for Hugo blogs"
 author: Mathieu
 date: "2020-10-14"
 draft: false
+description: "Optimise your Hugo blogs SEO!"
 tags:
     - Hugo
 categories:

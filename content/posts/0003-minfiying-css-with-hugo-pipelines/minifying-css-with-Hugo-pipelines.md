@@ -2,6 +2,7 @@
 title: "Minifying CSS With Hugo Pipelines"
 date: 2020-10-11T12:16:33+01:00
 draft: false
+description: "Use Hugo pipelines and the --minify flag to minify your site's HTML and its JS and CSS assets!"
 author: Mathieu
 tags:
     - web page improvement
