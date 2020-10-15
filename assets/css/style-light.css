@@ -1580,6 +1580,12 @@ code {
 figure figcaption p {
   font-size: small;
   text-align: center;
+  font-style: oblique;
+}
+
+figure img {
+  border: solid;
+  border-color: #9c3156;
 }
 
 .highlight figcaption a {

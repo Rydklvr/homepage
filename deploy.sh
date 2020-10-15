@@ -4,7 +4,7 @@ rm -rf public
 echo "Generating new minified public directory..."
 hugo --minify
 echo "Optimising images..."
-find static/img -name '*.png' -exec convert {} png8:{} \;
+find static/img -name '*.png' -exec convert -quality 10 {} png8:{} \;
 echo "Deploying to CloudFront..."
 hugo deploy
 echo "Invalidating CloudFront cache..."
