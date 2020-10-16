@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Params.languageCode }}">
+{{ partial "head.html" . }}
+    <body class="max-width mx-auto px3 ltr">
+        <div class="content index py4">
+            {{ partial "header.html" . }}
+            {{ partial "footer.html" . }}
+            <h1>Page not found</h1>
+            <p><em>(That's HTTP 404 technically)</em></p>
+            <p>It looks like the page you were looking for doesn't exist.
+                Double-check the URL, or <a href="{{ .Site.BaseURL }}">go back to
+                    the homepage</a> and try and find the page you were looking for
+                    from there.
+            </p>
+        </div>
+        {{ template "_internal/google_analytics.html" . }}
+    </body>
+</html>

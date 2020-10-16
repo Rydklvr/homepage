@@ -1,15 +1,3 @@
-/**
- * Sets up Justified Gallery.
- */
-if (!!$.prototype.justifiedGallery) {
-  var options = {
-    rowHeight: 140,
-    margins: 4,
-    lastRow: "justify"
-  };
-  $(".article-gallery").justifiedGallery(options);
-}
-
 $(document).ready(function() {
 
   /**
@@ -56,15 +44,6 @@ $(document).ready(function() {
      */
     if (menu.length) {
       $(window).on("scroll", function() {
-        var topDistance = menu.offset().top;
-
-        // hide only the navigation links on desktop
-        if (!nav.is(":visible") && topDistance < 50) {
-          nav.show();
-        } else if (nav.is(":visible") && topDistance > 100) {
-          nav.hide();
-        }
-
         // on tablet, hide the navigation icon as well and show a "scroll to top
         // icon" instead
         if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {

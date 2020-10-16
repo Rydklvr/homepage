@@ -491,7 +491,7 @@ body {
 }
 
 .content a.icon {
-  word-spacing: 10px;
+  word-spacing: 10px!important;
   background-image: none;
 }
 
@@ -683,6 +683,10 @@ body {
     padding-top: 1rem;
     padding-left: 70px;
     font-size: 1rem;
+  }
+
+  #actions-footer {
+    font-size: medium;
   }
 }
 #header-post {
@@ -913,7 +917,7 @@ body {
   z-index: 5000000;
   width: 100%;
   border-top: 1px solid #666;
-  background: #dedcd9;
+  background: #f7f6f5;
   transition: opacity 0.2s;
 }
 #footer-post a {
@@ -958,8 +962,8 @@ body {
 }
 #footer-post #actions-footer {
   overflow: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
   padding-right: 1rem;
   padding-left: 1rem;
   width: 100%;
