@@ -9,7 +9,7 @@
 
 {{ $ptSerif := resources.Get "fonts/PT_Serif/PTSerif-Regular.ttf" }}
 
-<link rel="preload" href="{{ $styleBundle.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ $styleBundle.RelPermalink }}" as="style">
 <link rel="preload" href="{{ $ptSerif.RelPermalink }}" as="font" type="font/ttf" crossorigin="anonymous">
 <noscript>
     <link rel="stylesheet" href="{{ $styleBundle.RelPermalink }}">

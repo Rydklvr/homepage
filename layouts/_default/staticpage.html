@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.Params.languageCode }}">
+{{ partial "head.html" . }}
+<body class="max-width mx-auto px3 ltr">
+<div class="content index py4">
+
+    {{ partial "header.html" . }}
+
+    {{ .Site.Params.description }}
+    <section>
+        <p>Find me here:
+            {{ $length := (len .Site.Params.social) }}
+            {{ range $index, $elem := .Site.Params.social}}
+                {{ if eq $elem.name "email" }}
+                    <a class="icon" target="_blank" rel="noopener noreferrer" href="mailto:{{ $elem.link }}"
+                       aria-label="Email">
+                        <i class="fas fa-envelope fa-fw"></i>
+                    </a>
+                {{ else if eq $elem.name "rss" }}
+                    <a class="icon" target="_blank" rel="noopener noreferrer" href="{{ $elem.link }}"
+                       aria-label="RSS feed">
+                        <i class="fas fa-rss fa-fw"></i>
+                    </a>
+                {{ else }}
+                    <a class="icon" target="_blank" rel="noopener noreferrer" href="{{ $elem.link }}"
+                       aria-label="{{ $elem.name }}">
+                        <i class="fab fa-{{ lower $elem.name }} fa-fw"></i>
+                    </a>
+                {{ end }}
+            {{ end }}
+        </p>
+    </section>
+
+    <section>
+        <p>The best way to contact me is via <a href="mailto:m@mathieuhendey.com">email</a>.</p>
+    </section>
+
+    {{ partial "footer.html" . }}
+
+</div>
+{{ template "_internal/google_analytics.html" . }}
+</body>
+</html>

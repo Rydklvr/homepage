@@ -6,6 +6,7 @@ description: "A way to download all your historical last.fm scrobbles with a
 simple Python script. Analyse your last.fm history through the ages!"
 categories:
     - music
+    - matplotlib
 tags:
     - Last FM
 ---
@@ -17,6 +18,8 @@ for it.
 With that it mind, I set out to download all my historical Last.fm data, but it
 turns out there's no way to do so. Foiled! Except their API doesn't seem to care
 so much, so let's use that.
+
+We'll also use `matplotlib` to generate a bar graph with artists on the x axis and scrobbles on the y axis.
 
 The full code for this is available on
 [GitHub](https://github.com/mathieuhendey/lastfm_downloader), and I suggest
@@ -210,20 +213,72 @@ Here's an excerpt of the CSV I get out:
 7,Mischief Brew,Bacchanal 'N' Philadelphia,Every Town Will Celebrate,1602770173,2020-10-15 13:56:13
 ```
 
-## More ideas
+## Generating a bar chart from your results
 
-Now you have all your data, you could use `matplotlib` to plot it
+Now you have all your data, you can use `plot.py` which is included in the repository to generate a bar chart.
+
+```python {linenos=table,linenostart=1}
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+def arrange_data_frame(dataframe=pd.read_csv("data/lastfm_scrobbles.csv")):
+    """Get the the artist out of the dataframe and drop other columns.
+
+    Relies on you having run downloader.py first to populate the CSV.
+    """
+    dataframe = dataframe.drop(['album', 'track', 'timestamp', 'datetime'], axis=1)
+    dataframe['scrobbles'] = dataframe.groupby('artist')['artist'].transform('count')
+    dataframe = dataframe.drop_duplicates()
+    return dataframe.sort_values(by='scrobbles', ascending=False)
+
+
+def get_plot(dataframe):
+    """Arrange the plot.
+
+    Creates a bar chart with Artist on the x axis and number of scrobbles of
+    that artist on the y axis.
+
+    Rotates the artist names on the x axis so they fit on the chart.
+    """
+    plt.xkcd()
+    dataframe = dataframe.iloc[0:20]
+    dataframe.plot(x="artist", y="scrobbles", kind="bar")
+    plt.tick_params(axis='x', pad=6)
+    plt.margins(0.2)
+    plt.xticks(fontsize=8, horizontalalignment="left")
+    plt.tight_layout()
+    plt.xticks(rotation=-45)
+    plt.ylabel("Scrobbles")
+    plt.tick_params(axis='x', which='major', pad=10)
+    plt.subplots_adjust(right=0.9, bottom=0.3)
+    plt.tight_layout()
+    return plt
+
+
+arranged_dataframe = arrange_data_frame()
+plot = get_plot(arranged_dataframe)
+
+# Save plot to ./chart.png
+plt.savefig("chart.png", dpi=500)
+```
 
 {{< figure src="/img/top_scrobbles.png" caption="Don't judge me" width="700px"
 height="310px" alt="Top scrobbles">}}
 
-or do something like
+## Other ideas
+
+### Finding how many times you've listened to a song
 
 ```sh
-rg "Little Wing" data/lastfm_scrobbles.csv | wc -l
+rg "little wing" data/lastfm_scrobbles.csv | wc -l
+    33
 ```
+### Finding how many times you've listened to an artist
 
-to see how many times you've listened to a particular song.
-
+```sh
+rg "fugazi" data/lastfm_scrobbles.csv | wc -l
+      74
+```
 If you want to see the full Python script, it's here:
 <https://github.com/mathieuhendey/lastfm_downloader/blob/master/downloader.py>
