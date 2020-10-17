@@ -1,18 +1,18 @@
 <header id="header" role="banner">
-  <a href="{{ .Site.BaseURL }}">
-      <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }})"></div>
-    <div id="title">
-      <h1>{{ .Site.Title }}</h1>
+    <a href="{{ .Site.BaseURL }}">
+        <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }})"></div>
+        <div id="title">
+            <h1>{{ .Site.Title }}</h1>
+        </div>
+    </a>
+    <div id="nav" role="navigation">
+        <ul>
+            <li class="icon">
+                <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+            </li>
+            {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
     </div>
-  </a>
-  <div id="nav" role="navigation">
-    <ul>
-      <li class="icon">
-        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
-      </li>
-      {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </div>
 </header>

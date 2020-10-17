@@ -2,19 +2,19 @@
 title: "Minifying CSS With Hugo Pipelines"
 date: 2020-10-11T12:16:33+01:00
 draft: false
-description: "Use Hugo pipelines and the --minify flag to minify your site's HTML and its JS and CSS assets!"
+description: "Use Hugo pipelines with the `--minify` flag to minify your site's HTML and its JS and CSS assets!"
 author: Mathieu
 tags:
     - web page improvement
     - minification
-    - Hugo
 categories:
     - blogging
+    - Hugo
 ---
 
 I was looking at the Google PageSpeed[^1] report for my website as that's
 just the kind of thing I get up to on a Sunday, when I noticed that none
-of my CSS was minified and it was adding up to a second to page loads.
+of my CSS was minified, and it was adding up to a second to page loads.
 
 "This will be easy I thought, surely there's a simple way to do this
 out-of-the-box with Hugo". Well, there is a way, but it's not *that* simple.

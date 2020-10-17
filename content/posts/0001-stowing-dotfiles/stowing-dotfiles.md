@@ -23,7 +23,7 @@ directories on the filesystem, and makes them all appear to be installed in a si
 
 ## Set up
 
-First you'll need to install `Stow` using your package manager of choice. I use a Mac so it's just:
+First you'll need to install `Stow` using your package manager of choice. I use a Mac, so it's just:
 
 ```sh
 brew install stow

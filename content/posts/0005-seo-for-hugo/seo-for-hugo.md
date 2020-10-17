@@ -5,9 +5,11 @@ date: "2020-10-14"
 draft: false
 description: "Optimise your Hugo blogs SEO!"
 tags:
-    - Hugo
-categories:
     - SEO
+    - web page improvement
+categories:
+    - Hugo
+    - static blog
 ---
 
 I was recently doing some yak-shaving and decided to improve the SEO of my blog.
@@ -192,7 +194,7 @@ test. Here are my results:
 
 {{< figure src="/img/lighthouse_100_seo.png" caption="100% SEO score in Lighthouse" width="700px" height="310px" alt="Lighthouse SEO score">}}
 
-There are more tags for Facebook etc. but I don't use those services so didn't
+There are more tags for Facebook etc., but I don't use those services so did not
 include them.
 
 You can find my full `layouts/partials/meta.html` on

@@ -1,4 +1,4 @@
-{{ $css := resources.Get "css/style-light.css" }}
+{{ $css := resources.Get "css/style.css" }}
 {{ $faCss := resources.Get "font-awesome/css/all.css" }}
 {{ $styleBundle := slice $css $faCss | resources.Concat "css/bundle.css" | resources.Minify | fingerprint}}
 
@@ -14,6 +14,5 @@
 <noscript>
     <link rel="stylesheet" href="{{ $styleBundle.RelPermalink }}">
 </noscript>
-
 <link rel="stylesheet" href="{{ $styleBundle.RelPermalink }}">
 <script src="{{ $jsBundle.RelPermalink }}" defer></script>

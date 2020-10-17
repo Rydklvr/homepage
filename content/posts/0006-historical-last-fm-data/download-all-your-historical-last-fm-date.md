@@ -3,7 +3,7 @@ title: "Download All Your Historical last.fm Data"
 date: "2020-10-15"
 draft: false
 description: "A way to download all your historical last.fm scrobbles with a
-simple Python script. Anaylse your last.fm history through the ages!"
+simple Python script. Analyse your last.fm history through the ages!"
 categories:
     - music
 tags:
@@ -28,7 +28,7 @@ it to take some time.**
 Once you have it cloned, `cd` into the repo and install the requirements with
 
 ```python
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 What follows is just an explanation of what is happening.
@@ -93,67 +93,77 @@ def get_scrobbles(
 Next we create the URL we're going to use to get our data:
 
 ```python {linenos=table,linenostart=1}
-    url = (
-        "https://ws.audioscrobbler.com/2.0/?method=user.get{}"
-        "&user={}"
-        "&api_key={}"
-        "&limit={}"
-        "&extended={}"
-        "&page={}"
-        "&format=json"
-    )
+# initialize url and lists to contain response fields
+url = (
+    "https://ws.audioscrobbler.com/2.0/?method=user.get{}"
+    "&user={}"
+    "&api_key={}"
+    "&limit={}"
+    "&extended={}"
+    "&page={}"
+    "&format=json"
+)
+```
+
+### Make a request to get the number of pages of scrobbles we'll be receiving
+
+```python {linenos=table,linenostart=1}
+# make first request, just to get the total number of pages
+request_url = url.format(method, username, key, limit, extended, page)
+response = requests.get(request_url).json()
+total_pages = int(response[method]["@attr"]["totalPages"])
+if pages > 0:
+    total_pages = min([total_pages, pages])
+
+print("Total pages to retrieve: {}".format(total_pages))
 ```
 
 ### Some objects to store the data in
 
 ```python {linenos=table,linenostart=1}
-    responses = []
-    artist_names = []
-    album_names = []
-    track_names = []
-    timestamps = []  # in UTC
-```
-
-### Getting a rough idea of how long this will take (a lot of time)
-
-```python {linenos=table,linenostart=1}
-   # make first request, just to get the total number of pages
-    request_url = url.format(method, username, key, limit, extended, page)
-    response = requests.get(request_url).json()
-    total_pages = int(response[method]["@attr"]["totalPages"])
-    if pages > 0:
-        total_pages = min([total_pages, pages])
-
-    print("Total pages to retrieve: {}".format(total_pages))
+artist_names = []
+album_names = []
+track_names = []
+timestamps = [] # UTC
 ```
 
 ### Make requests one at a time with a gap between to avoid rate limits
 
 ```python {linenos=table,linenostart=1}
-    # request each page of data one at a time
-    for page in range(1, int(total_pages) + 1, 1):
-        print("Page: {}".format(page))
-        time.sleep(time_between_requests)
-        request_url = url.format(method, username, key, limit, extended, page)
-        responses.append(requests.get(request_url))
+for page in range(1, int(total_pages) + 1, 1):
+    print(
+        "\rPage: {}. Estimated time remaining: {} seconds.".format(
+            page, 2.5 * int(total_pages - page)
+        ),
+        end="",
+    )
+    time.sleep(time_between_requests)
+    request_url = url.format(method, username, key, limit, extended, page)
+    response = requests.get(request_url)
 ```
+
+I found that it took about 2.5 seconds per page, so I use that number to get the
+estimated runtime of the script. For my user which has 279 pages, each with 200
+scrobbles each, the estimated runtime is 695 seconds.
 
 ### Parsing the date from last.fm
 
-Now we have a `responses` list containing all the data we want, we can do some processing on it!
+Now we have a `responses` dictionary containing all the data we want, we can do
+some processing on it and grab what we want out of it.
 
 ```python {linenos=table,linenostart=1}
-    # parse the fields out of each scrobble in each page (aka response) of scrobbles
-    for response in responses:
-        scrobbles = response.json()
-        for scrobble in scrobbles[method]["track"]:
-            # only retain completed scrobbles (aka, with timestamp and not 'now playing')
-            if "date" in scrobble.keys():
-                artist_names.append(scrobble["artist"]["#text"])
-                album_names.append(scrobble["album"]["#text"])
-                track_names.append(scrobble["name"])
-                timestamps.append(scrobble["date"]["uts"])
+if method in response.json():
+            response_json = response.json()[method]["track"]
+            for track in response_json:
+                if "@attr" not in track:
+                    artist_names.append(track["artist"][TEXT])
+                    album_names.append(track["album"][TEXT])
+                    track_names.append(track["name"])
+                    timestamps.append(track["date"]["uts"])
 ```
+
+`method` and `@attr` are to do with currently scrobbling songs. They return a
+different structure of Json so I just skip them.
 
 ### Pandas to create a CSV
 
@@ -168,14 +178,12 @@ And the final step is to create a Pandas dataframe in order to output our data t
     df["timestamp"] = timestamps
     # In UTC. Last.fm returns datetimes in the user's locale when they listened
     df["datetime"] = pd.to_datetime(df["timestamp"].astype(int), unit="s")
-
-    return df
 ```
 
 Finally, we write that data to a CSV and save it to disk:
 
 ```python {linenos=table,linenostart=1}
-scrobbles = get_scrobbles(pages=0)  # Default to all Scrobbles
+scrobbles = get_scrobbles(page=1, pages=0)  # Default to all Scrobbles
 scrobbles.to_csv("./data/lastfm_scrobbles.csv", index=1, encoding="utf-8")
 print("{:,} total rows".format(len(scrobbles)))
 scrobbles.head()
@@ -188,20 +196,34 @@ You will now have a populated `data/lastfm_scrobbles.csv` in the repo where you 
 Now you have a CSV containing *all* of your last.fm scrobbles from now back to
 when you first started scrobbling.
 
-Here's the `head` of the CSV I get out:
+Here's an excerpt of the CSV I get out:
 
-```csv
-artist,album,track,timestamp,datetime
-0,Nirvana,In Utero - 20th Anniversary Remaster,Rape Me,1602591111,2020-10-13 12:11:51
-1,Nirvana,In Utero - 20th Anniversary Remaster,Heart-Shaped Box,1602590831,2020-10-13 12:07:11
-2,Mischief Brew,Bacchanal 'N' Philadelphia,Devil Of A Time,1602585328,2020-10-13 10:35:28
-3,Mischief Brew,Bacchanal 'N' Philadelphia,"Fare Well, Good Fellows",1602585106,2020-10-13 10:31:46
-4,Mischief Brew,Bacchanal 'N' Philadelphia,Liberty Unmasked,1602584930,2020-10-13 10:28:50
-5,Mischief Brew,Bacchanal 'N' Philadelphia,Dirty Pennies,1602584538,2020-10-13 10:22:18
-6,Mischief Brew,Bacchanal 'N' Philadelphia,Boycott Me!,1602584374,2020-10-13 10:19:34
-7,Mischief Brew,Bacchanal 'N' Philadelphia,Olde Tyme Mem'ry,1602584074,2020-10-13 10:14:34
-8,Mischief Brew,Smash The Windows,Roll Me Through the Gates of Hell,1602583862,2020-10-13 10:11:02
+```txt
+,artist,album,track,timestamp,datetime
+0,The Hotelier,"Home, Like Noplace Is There",The Scope of All of This Rebuilding,1602839888,2020-10-16 09:18:08
+1,The Hotelier,"Home, Like Noplace Is There",An Introduction to the Album,1602838447,2020-10-16 08:54:07
+2,Julien Baker,Turn Out the Lights,Appointments,1602797294,2020-10-15 21:28:14
+3,Jimi Hendrix,Axis: Bold As Love,Little Wing,1602770967,2020-10-15 14:09:27
+4,Jimi Hendrix,Are You Experienced,Hey Joe,1602770757,2020-10-15 14:05:57
+5,Mischief Brew,Bacchanal 'N' Philadelphia,Olde Tyme Mem'ry,1602770385,2020-10-15 13:59:45
+6,Julien Baker,Turn Out the Lights,Appointments,1602770174,2020-10-15 13:56:14
+7,Mischief Brew,Bacchanal 'N' Philadelphia,Every Town Will Celebrate,1602770173,2020-10-15 13:56:13
 ```
+
+## More ideas
+
+Now you have all your data, you could use `matplotlib` to plot it
+
+{{< figure src="/img/top_scrobbles.png" caption="Don't judge me" width="700px"
+height="310px" alt="Top scrobbles">}}
+
+or do something like
+
+```sh
+rg "Little Wing" data/lastfm_scrobbles.csv | wc -l
+```
+
+to see how many times you've listened to a particular song.
 
 If you want to see the full Python script, it's here:
 <https://github.com/mathieuhendey/lastfm_downloader/blob/master/downloader.py>

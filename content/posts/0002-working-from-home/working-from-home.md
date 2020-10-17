@@ -22,7 +22,7 @@ COVID-19 goes very quickly from a subject of small-talk to real worry.
 
 **On the 12th of March**, we get an email from the CEO saying every office in
 the world was to move to work from home by default. This was not unsurprising
-news: the news in the UK had been talking about lockdown for quite some time.
+news: the news in the UK had been talking about the lockdown for quite some time.
 
 So that was it; we were all working from home. We'd been told to start bringing
 everything we needed to do our jobs home for a few weeks at that point, so I had
@@ -90,7 +90,7 @@ no longer waiting for the day we head back to the office.
 ## How I learned to love WFH (Sep-present)
 
 Despite the improvements mentioned above, I was still working from my tiny
-laptop on a sofa. In the meantime, Arm released a system allowing a small number
+laptop on a sofa. In the meantime, Arm released a system allowing a few
 of us into the office per day, so I booked a day in and raided my desk, running
 away with two monitors under my arms.
 
@@ -117,18 +117,18 @@ I cycled to work, and I liked to be in early to leave early, so I was up at
 a shower and couldn't be bothered doing anything.
 
 Now, as soon as the clock hits 16:00, I'm out the door and on my bike. I have
-time to spend with my family in the morning before they leave for work and I'm
+time to spend with my family in the morning before they leave for wor, and I'm
 helping out around the house more.
 
 Unfortunately, there's not much in the way of pubs and cinemas; most are open
-with social-distancing measures but I still don't feel safe going (I've had
+with social-distancing measures, but I still don't feel safe going (I've had
 pneumonia twice). Fortunately I don't seem to require as much human-interaction
-as some of my colleagues so I'm not feeling the effects of this yet.
+as some of my colleagues, so I'm not feeling the effects of this yet.
 
 #### Mentally, work feels less like work
 
 At first, this was an issue; I liked having the separation of an office where
-Work Things happened, and a home where Home Things happened. Now that it's all
+Work Things happened, and a home where Home Things happened. Now it's all
 merged into one location (i.e. my bedroom), I'm personally finding it a lot more
 enjoyable. As mentioned above, I find my productivity improves with regular
 breaks. Sometimes breakthroughs about what I'm working on come to me while I'm
@@ -158,7 +158,7 @@ Whereas before there was physical separation between work and home, there now
 isn't. I find it can sometimes be difficult to change modes in my head, and not
 always check Slack or make small adjustments to code.
 
-I've set up a mute on my Slack notifications to try and mitigate this, but in
+I've set up a mute on my Slack notifications to try to mitigate this, but in
 today's data-addicted world it can be difficult not to log in every so often and
 see what's happening.
 
@@ -174,7 +174,7 @@ who's used Confluence knows, its discovery features are... lacking somewhat.
 #### Spontaneous conversations have disappeared
 
 There are people I would have spoken to on smoke breaks or in the kitchen that
-I've barely talked to since lockdown. If you're having a bad day it can be nice
+I've barely talked to since the lockdown. If you're having a bad day it can be nice
 to commiserate with someone over a tea, but in today's world of
 everything-happens-in-IM, the spontaneity just isn't there, and it can feel
 awkward. We tried having some daily "tea break" open-conversation calls, but
@@ -190,7 +190,7 @@ inevitable and beneficial.
 I would like to see the office become more of a place of **meeting** rather than
 a place of **work**.
 
-Further, it's clear that it hasn't worked for everyone. WFH definitely didn't
+Further, it's clear it has not worked for everyone. WFH definitely didn't
 work for me for the first few months, and I'm not sure we can expect new
 joiners, perhaps people who've just graduated from uni, to be able to hit the
 ground running without physical, in-presence support.

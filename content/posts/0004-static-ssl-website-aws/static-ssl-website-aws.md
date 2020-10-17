@@ -87,7 +87,7 @@ screen.
 
 Add both the bare domain and the `www.` subdomain.
 
-{{< figure src="/img/certificate_domain_names.png" caption="Make sure you add both the bare domain and the www subdomain" width="440px" height="242px" alt="Add domain names">}}
+{{< figure src="/img/certificate_domain_names.png" caption="Make sure you add both the bare domain, and the www subdomain" width="440px" height="242px" alt="Add domain names">}}
 
 On the next screen, choose whichever verification one you prefer. I chose DNS
 validation because since my domain is all managed in AWS, it involved no input
@@ -102,7 +102,7 @@ then once those records propagate your certificate will be ready to use.
 ## Setting up CloudFront distributions
 
 CloudFront is basically a CDN. We can use it in front of our S3 buckets and add
-the certificate we created earlier to get SSL and the nice :lock: in the address
+the certificate we created earlier to get SSL, and the nice :lock: in the address
 bar.
 
 We're going to create two distributions, one for each of our two S3 buckets.
@@ -124,7 +124,7 @@ We're going to create two distributions, one for each of our two S3 buckets.
     created in Certificate Manager should auto-populate it, select it.
     1. If your certificate isn't appearing, go back to **Certificate Manager**
        and make sure you created it in the **N. Virginia** region.
-7. Leave **Default Root Object** blank. Again, I don't know why but it caused me
+7. Leave **Default Root Object** blank. Again, I don't know why, but it caused me
    issues.
 
 ---
@@ -146,7 +146,7 @@ We're going to create two distributions, one for each of our two S3 buckets.
     created in Certificate Manager should auto-populate it, select it.
     1. If your certificate isn't appearing, go back to **Certificate Manager**
        and make sure you created it in the **N. Virginia** region.
-7. Leave **Default Root Object** blank. Again, I don't know why but it caused me
+7. Leave **Default Root Object** blank. Again, I don't know why, but it caused me
    issues.
 
 ---
@@ -163,11 +163,11 @@ it's back to Route 53.
 
 In the CloudFront console you should see both your distributions, along with a
 **domain name**. Just keep a note of which distribution belongs to which of your
-buckets because now it's back to Route 53 to change the A records we added
+buckets because now it's back to Route 53 to change the `A records` we added
 earlier.
 
 Go to the [Hosted zones](https://console.aws.amazon.com/route53/v2/hostedzones#)
-page and select the one that you created earlier, (for me it's
+page and select the one you created earlier, (for me it's
 **mathieuhendey.com**).
 
 You may see a few new records that were automatically created when Certificate

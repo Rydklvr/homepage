@@ -1,46 +1,47 @@
 <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="Menu icon"><i class="fas fa-bars fa-lg" aria-hidden="true"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="Menu icon"><i class="fas fa-bars fa-lg" aria-hidden="true"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="Top of page" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"
-    style="display:none;"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i></a>
-  <span id="menu">
+    <a id="menu-icon" href="#" aria-label="Menu icon"><i class="fas fa-bars fa-lg" aria-hidden="true"></i></a>
+    <a id="menu-icon-tablet" href="#" aria-label="Menu icon"><i class="fas fa-bars fa-lg" aria-hidden="true"></i></a>
+    <a id="top-icon-tablet" href="#" aria-label="Top of page"
+       onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"
+       style="display:none;"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i></a>
+    <span id="menu">
     <span id="nav" role="navigation">
       <ul>
         {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
     </span>
-    <br />
+    <br/>
     <span id="actions">
       <ul>
         {{ if .Prev }}
-          <li>
+            <li>
             <a class="icon" href=" {{ .Prev.Permalink }}" aria-label="Previous post">
               <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();"
-                onmouseout="$('#i-prev').toggle();"></i>
+                 onmouseout="$('#i-prev').toggle();"></i>
             </a>
           </li>
         {{ end }}
-        {{ if .Next }}
-          <li>
+          {{ if .Next }}
+              <li>
             <a class="icon" href="{{ .Next.Permalink }}" aria-label="Next post">
               <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();"
-                onmouseout="$('#i-next').toggle();"></i>
+                 onmouseout="$('#i-next').toggle();"></i>
             </a>
           </li>
-        {{ end }}
+          {{ end }}
         <li>
           <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"
-            aria-label="Top of page">
+             aria-label="Top of page">
             <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
-              onmouseout="$('#i-top').toggle();"></i>
+               onmouseout="$('#i-top').toggle();"></i>
           </a>
         </li>
         <li>
           <a class="icon" href="#" aria-label="Links to share">
             <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();"
-              onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+               onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
           </a>
         </li>
       
@@ -50,10 +51,10 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br />
+    <br/>
     <div id="share" style="display: none">
       {{ .Scratch.Set "icon_class_name" ""}}
-      {{ partial "share.html" . }}
+        {{ partial "share.html" . }}
     </div>
     <div id="toc">
       {{ .TableOfContents }}
