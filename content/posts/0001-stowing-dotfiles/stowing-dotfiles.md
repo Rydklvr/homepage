@@ -57,13 +57,16 @@ stow -R -t ~ git
 
 Here's an explanation of what that command is doing:
 
-1. `-R` means "restow". This will overwrite your symlinks, say if you've updated your dotfiles on another machine and want to sync them to your current machine From the manpage:
-    > Restow packages (first unstow, then stow again). This is useful for pruning obsolete symlinks
+`-R`
+: This will overwrite your symlinks, say if you've updated your dotfiles on another machine and want to sync them to your current machine From the manpage:
+   > Restow packages (first unstow, then stow again). This is useful for pruning obsolete symlinks
     from the target tree after updating the software in a package.
+     
+`-t ~`
+: The target directory. This is where the symlinks will be created.
 
-2. `-t ~` is the target directory. This is where the symlinks will be created.
-
-3. The final argument is the directory containing the files to be symlinked to.
+`git`
+: The final argument is the directory containing the files to be symlinked to, in this case, `git`.
 
 Putting it all together, running `stow -R -t ~ git` will create a symlink in your home directory to `~/dotfiles/git/.gitconfig`.
 
