@@ -143,13 +143,9 @@ to eke out as much performance from your blog as possible.
 | Asset | Pre-bundling and minifying | Post-bundling and minifying |
 |-------|----------------------------|-----------------------------|
 | CSS   | 105K                       | 81K                         |
-| JS    | 1.4M                       | 1.3M                        |
+| JS    | 1.4M                       | 449k                        |
 
-As you can see, I didn't get much out of the JS minifcation, but I think this is
-because I'm using the full font-awesome JS, which I'm not sure I need to be
-doing.
-
-Still, it ends up being fewer network requests, and your page will be
+It ends up being fewer network requests, and your page will be
 interactive faster because it loads the assets all at once rather than
 one-by-one.
 
