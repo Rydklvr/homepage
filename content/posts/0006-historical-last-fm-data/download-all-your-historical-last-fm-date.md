@@ -263,8 +263,8 @@ plot = get_plot(arranged_dataframe)
 plt.savefig("chart.png", dpi=500)
 ```
 
-{{< figure src="/img/top_scrobbles.png" caption="Don't judge me" width="700px"
-height="310px" alt="Top scrobbles">}}
+{{< figure src="/img/top_scrobbles.png" caption="Don't judge me" width="800"
+height="600" alt="Top scrobbles">}}
 
 ## Other ideas
 

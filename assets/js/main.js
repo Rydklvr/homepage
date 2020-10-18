@@ -13,10 +13,10 @@ $(document).ready(function () {
      * for Desktop, tablet and mobile.
      */
     if ($(".post").length) {
-      const menu = $("#menu");
-      const menuIcon = $("#menu-icon, #menu-icon-tablet");
+        const menu = $("#menu");
+        const menuIcon = $("#menu-icon, #menu-icon-tablet");
 
-      /**
+        /**
          * Display the menu on hi-res laptops and desktops.
          */
         if ($(document).width() >= 1440) {
@@ -45,7 +45,7 @@ $(document).ready(function () {
             $(window).on("scroll", function () {
                 // on tablet, hide the navigation icon as well and show a "scroll to top
                 // icon" instead
-              const menuIcon = $("#menu-icon")
+                const menuIcon = $("#menu-icon")
                 if (!menuIcon.is(":visible") && topDistance < 50) {
                     $("#menu-icon-tablet").show();
                     $("#top-icon-tablet").hide();
@@ -61,9 +61,9 @@ $(document).ready(function () {
          * hide it again after scrolling downwards.
          */
         if ($("#footer-post").length) {
-            var lastScrollTop = 0;
+            let lastScrollTop = 0;
             $(window).on("scroll", function () {
-                var topDistance = $(window).scrollTop();
+                let topDistance = $(window).scrollTop();
 
                 if (topDistance > lastScrollTop) {
                     // downscroll -> show menu
