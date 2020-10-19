@@ -69,6 +69,11 @@ name = 'lastfm'
 [[params.social]]
 link = 'https://mathieuhendey.com/index.xml'
 name = 'rss'
+
+[[params.social]]
+link = 'https://open.spotify.com/user/mathieuhendey?si=XfQnKgO5RJKGsXHey5YjQw'
+name = 'spotify'
+
 [[menu.main]]
 name = 'home'
 url = '/'

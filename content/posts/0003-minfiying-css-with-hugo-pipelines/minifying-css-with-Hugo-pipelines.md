@@ -1,5 +1,5 @@
 ---
-title: "Minifying CSS With Hugo Pipelines"
+title: "Minifying CSS with Hugo pipelines"
 date: 2020-10-11T12:16:33+01:00
 draft: false
 description: "Use Hugo pipelines with the `--minify` flag to minify your site's HTML and its JS and CSS assets!"
